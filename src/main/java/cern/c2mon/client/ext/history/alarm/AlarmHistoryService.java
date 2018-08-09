@@ -69,8 +69,24 @@ public interface AlarmHistoryService extends JpaRepository<Alarm, Long>{
   Page<Alarm> findAllByIdOrderByTimestampAndLogdateDesc(@Param("alarmId") Long alarmId, Pageable pageable);
 
   /**
-   *    * Find all alarm records for the given count and order them by timestamp and logdate decreasingly
-   *    distinct by active status
+   *Find all alarms between dates
+   *
+   * @param alarmId
+   * @param startTime
+   * @param endTime
+   * @return
+   */
+  @Query("SELECT new Alarm(a.logdate, a.tagId, a.id, "
+          + "a.faultFamily, a.active, a.timestamp, a.info) FROM Alarm a WHERE "
+          + "a.id = :alarmId AND a.timestamp BETWEEN :startTime AND :endTime "
+          + "ORDER BY a.timestamp DESC, a.logdate DESC")
+  List<Alarm> findAllByIdAndTimestampBetweenOrderByTimestampAndLogdateDesc(@Param("alarmId") Long alarmId,
+                                                                           @Param("startTime") LocalDateTime startTime,
+                                                                           @Param("endTime") LocalDateTime endTime);
+
+  /**
+   * Find all alarms distinct by active
+   *
    * @param alarmId
    * @param pageable
    * @return
