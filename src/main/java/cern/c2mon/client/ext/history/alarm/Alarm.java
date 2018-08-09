@@ -17,17 +17,15 @@
 package cern.c2mon.client.ext.history.alarm;
 
 
-import java.time.LocalDateTime;
+import cern.c2mon.client.ext.history.alarm.config.JpaConfiguration;
+import lombok.Data;
+import org.hibernate.annotations.Type;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
-
-import lombok.Data;
-import org.hibernate.annotations.Type;
-
-import cern.c2mon.client.ext.history.alarm.config.JpaConfiguration;
+import java.time.LocalDateTime;
 
 /**
  * Entity bean for historical alarm values.
@@ -39,39 +37,60 @@ import cern.c2mon.client.ext.history.alarm.config.JpaConfiguration;
 @Table(name = "alarmlog")
 public class Alarm {
 
-  /**
-   * The local alarm timestamp. In the database it is stored as UTC timestamp.
-   * @see JpaConfiguration
-   */
-  @Id
-  @Column(name = "servertime")
-  private LocalDateTime timestamp;
+    /**
+     * The local alarm timestamp. In the database it is stored as UTC timestamp.
+     *
+     * @see JpaConfiguration
+     */
+    @Id
+    @Column(name = "servertime")
+    private LocalDateTime timestamp;
 
-  @Column(name = "logdate")
-  private LocalDateTime logdate;
+    @Column(name = "logdate")
+    private LocalDateTime logdate;
 
-  @Column(name = "alarmid")
-  private Long id;
+    @Column(name = "alarmid")
+    private Long id;
 
-  @Column(name = "tagid")
-  private Long tagId;
+    @Column(name = "tagid")
+    private Long tagId;
 
-  @Column(name = "faultcode")
-  private int faultCode;
+    @Column(name = "faultcode")
+    private int faultCode;
 
-  @Column(name = "faultfamily")
-  private String faultFamily;
+    @Column(name = "faultfamily")
+    private String faultFamily;
 
-  @Column(name = "faultmember")
-  private String faultMember;
+    @Column(name = "faultmember")
+    private String faultMember;
 
-  @Type(type="yes_no")
-  private boolean active;
+    @Type(type = "yes_no")
+    private boolean active;
 
-  private String info;
+    private String info;
+
+    /**
+     * Constructor used for retrieving simple model without info info column
+     * @param logdate
+     * @param id
+     * @param tagId
+     * @param faultFamily
+     * @param active
+     * @param timestamp
+     */
+    public Alarm(LocalDateTime logdate, Long id, Long tagId, String faultFamily, boolean active,
+                 LocalDateTime timestamp) {
+        this.logdate = logdate;
+        this.id = id;
+        this.tagId = tagId;
+        this.faultFamily = faultFamily;
+        this.active = active;
+        this.timestamp = timestamp;
+    }
 
     /**
      * Constructor used for retrieving part of data from database with JPA
+     *
      * @param logdate
      * @param id
      * @param tagId
@@ -80,14 +99,14 @@ public class Alarm {
      * @param timestamp
      * @param info
      */
-  public Alarm(LocalDateTime logdate, Long id, Long tagId, String faultFamily, boolean active,
-               LocalDateTime timestamp, String info) {
-    this.logdate = logdate;
-    this.id = id;
-    this.tagId = tagId;
-    this.faultFamily = faultFamily;
-    this.active = active;
-    this.timestamp = timestamp;
-    this.info = info;
-  }
+    public Alarm(LocalDateTime logdate, Long id, Long tagId, String faultFamily, boolean active,
+                 LocalDateTime timestamp, String info) {
+        this.logdate = logdate;
+        this.id = id;
+        this.tagId = tagId;
+        this.faultFamily = faultFamily;
+        this.active = active;
+        this.timestamp = timestamp;
+        this.info = info;
+    }
 }

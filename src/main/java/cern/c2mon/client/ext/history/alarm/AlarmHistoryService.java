@@ -29,7 +29,7 @@ import java.util.stream.Stream;
 /**
  * This service allows querying {@link Alarm} history from the c2mon history database.
  *
- * @author Justin Lewis Salmon, Matthias Braeger
+ * @author Justin Lewis Salmon, Matthias Braeger, Szymon Halastra
  */
 public interface AlarmHistoryService extends JpaRepository<Alarm, Long>{
   /**
@@ -41,7 +41,8 @@ public interface AlarmHistoryService extends JpaRepository<Alarm, Long>{
    * @return The requested page
    * @see #findAllDistinctByIdAndTimestampBetweenOrderByTimestamp(Long, LocalDateTime, LocalDateTime)
    */
-  Page<Alarm> findAllDistinctByIdAndTimestampBetweenOrderByTimestamp(Long id, LocalDateTime startTime, LocalDateTime endTime, Pageable pageable);
+  Page<Alarm> findAllDistinctByIdAndTimestampBetweenOrderByTimestamp(Long id, LocalDateTime startTime,
+                                                                     LocalDateTime endTime, Pageable pageable);
 
   /**
    * Find all historical alarm records for the given time span and the given alarm id
@@ -51,7 +52,8 @@ public interface AlarmHistoryService extends JpaRepository<Alarm, Long>{
    * @return The resulting list
    * @see #findAllDistinctByIdAndTimestampBetweenOrderByTimestamp(Long, LocalDateTime, LocalDateTime, Pageable)
    */
-  List<Alarm> findAllDistinctByIdAndTimestampBetweenOrderByTimestamp(Long id, LocalDateTime startTime, LocalDateTime endTime);
+  List<Alarm> findAllDistinctByIdAndTimestampBetweenOrderByTimestamp(Long id, LocalDateTime startTime,
+                                                                     LocalDateTime endTime);
 
 
   /**
@@ -64,7 +66,20 @@ public interface AlarmHistoryService extends JpaRepository<Alarm, Long>{
           + "a.faultFamily, a.active, a.timestamp, a.info) FROM Alarm a WHERE "
           + "a.id = :alarmId "
           + "ORDER BY a.timestamp DESC, a.logdate DESC")
-  Page<Alarm> findAllByIdOrderByTimestampAndLogdate(@Param("alarmId") Long alarmId, Pageable pageable);
+  Page<Alarm> findAllByIdOrderByTimestampAndLogdateDesc(@Param("alarmId") Long alarmId, Pageable pageable);
+
+  /**
+   *    * Find all alarm records for the given count and order them by timestamp and logdate decreasingly
+   *    distinct by active status
+   * @param alarmId
+   * @param pageable
+   * @return
+   */
+  @Query("SELECT DISTINCT new Alarm(a.logdate, a.tagId, a.id, "
+          + "a.faultFamily, a.active, a.timestamp) FROM Alarm a WHERE "
+          + "a.id = :alarmId "
+          + "ORDER BY a.timestamp DESC, a.logdate DESC")
+  Page<Alarm> findSimpleAllByIdOrderByTimestampAndLogdateDesc(@Param("alarmId") Long alarmId, Pageable pageable);
 
   /**
    * Find all historical alarm records for the given time span and the given alarm id
@@ -119,7 +134,8 @@ public interface AlarmHistoryService extends JpaRepository<Alarm, Long>{
    * @param pageable The requested page
    * @return The requested page
    */
-  Page<Alarm> findAllDistinctByTimestampBetweenOrderByTimestamp(LocalDateTime startTime, LocalDateTime endTime, Pageable pageable);
+  Page<Alarm> findAllDistinctByTimestampBetweenOrderByTimestamp(LocalDateTime startTime, LocalDateTime endTime,
+                                                                Pageable pageable);
 
   /**
    * Find all historical alarm records for the given time span
@@ -133,19 +149,25 @@ public interface AlarmHistoryService extends JpaRepository<Alarm, Long>{
   /**
    * Returns the last N records for a given alarm id
    * @param id alarm id
-   * @param pageable Use e.g. <code>new PageResult(0, 100)</code> to retrieve the last 100 historical records for the given alarm
+   * @param pageable Use e.g. <code>new PageResult(0, 100)</code> to retrieve the last 100 historical records for
+   *                 the given alarm
    * @return The page of requested alarms
    */
   Page<Alarm> findAllDistinctByIdOrderByTimestampDesc(Long id, Pageable pageable);
 
   /**
-   * Returns the last N records for a given alarm, which has to be specified by the unique triplet: faultFamily, faultMember, faultCode
+   * Returns the last N records for a given alarm, which has to be specified by the unique triplet: faultFamily,
+   * faultMember, faultCode
    * @param faultFamily The name of the fault family to which the alarm belongs to
    * @param faultMember The fault member name within the given fault family to which the alarm belongs to
    * @param faultCode The fault code id which identifies the alarm within the given fault member
-   * @param pageable Use e.g. <code>new PageResult(0, 100)</code> to retrieve the last 100 historical records for the given alarm
+   * @param pageable Use e.g. <code>new PageResult(0, 100)</code> to retrieve the last 100 historical records
+   *                 for the given alarm
    * @return The page of requested alarms
    * @see #findAllDistinctByIdOrderByTimestampDesc(Long, Pageable)
    */
-  Page<Alarm> findAllDistinctByFaultFamilyAndFaultMemberAndFaultCodeOrderByTimestampDesc(String faultFamily, String faultMember, int faultCode, Pageable pageable);
+  Page<Alarm> findAllDistinctByFaultFamilyAndFaultMemberAndFaultCodeOrderByTimestampDesc(String faultFamily,
+                                                                                         String faultMember,
+                                                                                         int faultCode,
+                                                                                         Pageable pageable);
 }
