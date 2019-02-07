@@ -12,6 +12,7 @@ For more details on a given release, please check also the [Milestone planning](
 ### Changed
 
 ### Fixed
+- Removed javax.el 3.0.1-b08 artifact dependency which was conflicting with version 2.4 from core
 
 ## 1.8.8 - 2018-01-11
 ### Fixed
