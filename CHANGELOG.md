@@ -12,7 +12,17 @@ For more details on a given release, please check also the [Milestone planning](
 ### Changed
 
 ### Fixed
-- Removed javax.el 3.0.1-b08 artifact dependency which was conflicting with version 2.4 from core
+
+
+## 1.8.10 - 2019-02-11
+### Fixed
+- Removed javax.el 3.0.1-b08 artifact dependency which was conflicting with version 2.4 from C2MON client Core
+
+
+## [1.8.9] - 2018-03-19
+### Fixed
+- Fixed problems related to history player functionality. Registered listerer where not correctly notified.
+
 
 ## 1.8.8 - 2018-01-11
 ### Fixed
@@ -35,6 +45,7 @@ For more details on a given release, please check also the [Milestone planning](
 - Fixed all `AlarmHistoryService` queries by only using JPA (#6)
 
 
-[Unreleased]: %4
+[Unreleased]: %5
+[1.8.9]: %4
 [1.8.6]: %3
 [1.8.5]: %2
