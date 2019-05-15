@@ -56,49 +56,38 @@ public interface AlarmHistoryService extends JpaRepository<Alarm, Long>{
 
   /**
    * Find all historical alarm records for the given time span and the given alarm id in descending time order
-   * @param faultFamily The name of the fault family to which the alarm belongs to
-   * @param faultMember The fault member name within the given fault family to which the alarm belongs to
-   * @param faultCode The fault code id which identifies the alarm within the given fault member
+   * Returns the last N records for a given alarm id in descending time order
+   * @param alarmId alarm id
    * @param startTime start time to search for an alarm entry
    * @param endTime end time to search for an alarm entry
    * @param pageable The requested page
    * @return The requested page
    */
   @Query("SELECT DISTINCT a FROM Alarm a WHERE "
-           + "a.faultFamily = :faultFamily AND "
-           + "a.faultMember = :faultMember AND "
-           + "a.faultCode = :faultCode AND "
+           + "a.id = :alarmId AND "
            + "a.timestamp BETWEEN :startTime AND :endTime "
            + "ORDER BY a.timestamp DESC")
-  Page<Alarm> findAllDistinctInTimeSpanOrderByTimestampDesc(@Param("faultFamily") String faultFamily,
-                                                            @Param("faultMember") String faultMember,
-                                                            @Param("faultCode") int faultCode,
+  Page<Alarm> findAllDistinctInTimeSpanOrderByTimestampDesc(@Param("alarmId") Long alarmId,
                                                             @Param("startTime") LocalDateTime startTime,
                                                             @Param("endTime") LocalDateTime endTime,
                                                             Pageable pageable);
 
   /**
    * Find all historical alarm records for the given time span and the given alarm id in descending time order
-   * @param faultFamily The name of the fault family to which the alarm belongs to
-   * @param faultMember The fault member name within the given fault family to which the alarm belongs to
-   * @param faultCode The fault code id which identifies the alarm within the given fault member
+   * Returns the last N records for a given alarm id in descending time order
+   * @param alarmId alarm id
    * @param startTime start time to search for an alarm entry
    * @param endTime end time to search for an alarm entry
    * @param pageable The requested page
    * @return The requested page
    */
   @Query("SELECT DISTINCT a FROM Alarm a WHERE "
-           + "a.faultFamily = :faultFamily AND "
-           + "a.faultMember = :faultMember AND "
-           + "a.faultCode = :faultCode AND "
+           + "a.id = :alarmId AND "
            + "a.timestamp BETWEEN :startTime AND :endTime "
            + "ORDER BY a.timestamp DESC")
-  List<Alarm> findAllDistinctInTimeSpanOrderByTimestampDesc(@Param("faultFamily") String faultFamily,
-                                                            @Param("faultMember") String faultMember,
-                                                            @Param("faultCode") int faultCode,
+  List<Alarm> findAllDistinctInTimeSpanOrderByTimestampDesc(@Param("alarmId") Long alarmId,
                                                             @Param("startTime") LocalDateTime startTime,
                                                             @Param("endTime") LocalDateTime endTime);
-
 
   /**
    * Find all historical alarm records for the given time span in descending time order
