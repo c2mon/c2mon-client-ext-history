@@ -3,6 +3,7 @@ image: gitlab-registry.cern.ch/industrial-controls/sw-infra/jenkins/mvn-plus-jdk
 stages:
   - build
   - deploy 
+  - release
   - sonar
 
 # Get the settings file from c2mon project
@@ -23,6 +24,15 @@ build:
   script:
     - mvn -U -B clean test -Djavax.net.ssl.trustStore=${JAVA_HOME}/jre/lib/security/cacerts --settings settings.xml
   except:
+    - master
+    
+release_stable:
+  stage: release
+  script:
+    - echo "Release stable version"
+    - mvn -U -B release:prepare -Djavax.net.ssl.trustStore=${JAVA_HOME}/jre/lib/security/cacerts --settings settings.xml
+  when: manual
+  only:
     - master
     
 sonar_preview:
