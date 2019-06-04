@@ -62,6 +62,9 @@ public class Alarm {
   @Column(name = "faultmember")
   private String faultMember;
 
+  @Column(name ="sourcetime")
+  private LocalDateTime sourceTime;
+
   @Type(type="yes_no")
   private boolean active;
 
