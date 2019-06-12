@@ -128,4 +128,35 @@ public interface AlarmHistoryService extends JpaRepository<Alarm, Long>{
    */
   Page<Alarm> findAllDistinctByFaultFamilyAndFaultMemberAndFaultCodeOrderByTimestampDesc(
       String faultFamily, String faultMember, int faultCode, Pageable pageable);
+
+  /**
+   * Find all historical alarm records for the given source time span and the given alarm id in descending time order
+   * @param id alarm id
+   * @param startTime start time to search for an alarm entry
+   * @param endTime end time to search for an alarm entry
+   * @param pageable The requested page
+   * @return The requested page
+   * @see #findAllDistinctByIdAndSourceTimeBetweenOrderBySourceTimeDesc(Long, LocalDateTime, LocalDateTime)
+   */
+  Page<Alarm> findAllDistinctByIdAndSourceTimeBetweenOrderBySourceTimeDesc(
+      Long id, LocalDateTime startTime, LocalDateTime endTime, Pageable pageable);
+
+  /**
+   * Find all historical alarm records for the given source time span and the given alarm id in descending time order
+   * @param id alarm id
+   * @param startTime start time to search for an alarm entry
+   * @param endTime end time to search for an alarm entry
+   * @return The resulting list
+   * @see #findAllDistinctByIdAndSourceTimeBetweenOrderBySourceTimeDesc(Long, LocalDateTime, LocalDateTime )
+   */
+  List<Alarm> findAllDistinctByIdAndSourceTimeBetweenOrderBySourceTimeDesc(
+      Long id, LocalDateTime startTime, LocalDateTime endTime);
+
+  /**
+   * Returns the last N records for a given alarm id in descending time order
+   * @param id alarm id
+   * @param pageable Use e.g. <code>new PageResult(0, 100)</code> to retrieve the last 100 historical records for the given alarm
+   * @return The page of requested alarms
+   */
+  Page<Alarm> findAllDistinctByIdOrderBySourceTimeDesc(Long id, Pageable pageable);
 }
