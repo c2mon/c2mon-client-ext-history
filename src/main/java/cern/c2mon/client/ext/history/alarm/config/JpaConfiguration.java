@@ -21,7 +21,6 @@ import java.util.Map;
 
 import javax.sql.DataSource;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -42,12 +41,8 @@ import cern.c2mon.client.core.service.AlarmService;
 @EnableJpaRepositories("cern.c2mon.client.ext.history")
 public class JpaConfiguration {
 
-  @Autowired
-  @Qualifier("historyDataSource")
-  private DataSource dataSource;
-
   @Bean
-  public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+  public LocalContainerEntityManagerFactoryBean entityManagerFactory(@Qualifier("historyDataSource") DataSource dataSource) {
     HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
     adapter.setDatabasePlatform("org.hibernate.dialect.Oracle10gDialect");
     adapter.setShowSql(true);
@@ -68,9 +63,9 @@ public class JpaConfiguration {
   }
 
   @Bean
-  public JpaTransactionManager transactionManager() {
+  public JpaTransactionManager transactionManager(LocalContainerEntityManagerFactoryBean entityManagerFactory) {
     JpaTransactionManager transactionManager = new JpaTransactionManager();
-    transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
+    transactionManager.setEntityManagerFactory(entityManagerFactory.getObject());
     return transactionManager;
   }
 }

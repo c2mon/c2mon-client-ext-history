@@ -5,7 +5,7 @@
   <parent>
     <groupId>cern.c2mon.client</groupId>
     <artifactId>c2mon-client</artifactId>
-    <version>1.8.40</version>
+    <version>1.8.46-SNAPSHOT</version>
   </parent>
 
   <artifactId>c2mon-client-ext-history</artifactId>
@@ -49,12 +49,13 @@
       <artifactId>spring-context</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-jdbc</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.springframework</groupId>
-      <artifactId>spring-test</artifactId>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
+      <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>commons-dbcp</groupId>
@@ -69,16 +70,6 @@
       <artifactId>mybatis</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.springframework.data</groupId>
-      <artifactId>spring-data-jpa</artifactId>
-      <version>1.9.2.RELEASE</version>
-    </dependency>
-    <dependency>
-       <groupId>org.hibernate</groupId>
-       <artifactId>hibernate-entitymanager</artifactId>
-       <version>5.2.10.Final</version>
-    </dependency>
-    <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
     </dependency>
@@ -88,6 +79,11 @@
     </dependency>
 
     <!-- Test dependencies -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>

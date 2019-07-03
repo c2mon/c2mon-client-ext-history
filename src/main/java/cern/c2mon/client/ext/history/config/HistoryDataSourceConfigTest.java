@@ -23,17 +23,42 @@ import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
+import org.springframework.core.env.Environment;
 
 /**
  * @author Justin Lewis Salmon
  */
 @Configuration
-public class HistoryDataSourceConfig {
+public class HistoryDataSourceConfigTest {
 
   @Bean
-  @Profile("!test")
+  @Profile("test")
   @ConfigurationProperties(prefix = "c2mon.client.history.jdbc")
-  public DataSource historyDataSource() {
-    return DataSourceBuilder.create().build();
+  public DataSource historyDataSource(Environment environment) {
+
+    /**
+     * HSQL only allows other JVMs to connect, if data is persisted on disk.<br/>
+     * By default C2MON server is only storing data In-Memory.
+     * Therefore please change accordingly the following c2mon server properties to the same url:
+     * <li>c2mon.server.cachedbaccess.jdbc.url</li>
+     * <li>c2mon.server.history.jdbc.url</li>
+     */
+    String url = "jdbc:hsqldb:hsql://localhost/c2mondb;sql.syntax_ora=true";
+    String username = "sa";
+    String password = "";
+
+    DataSourceBuilder<?> dataSource = DataSourceBuilder.create().url(url).username(username).password(password);
+
+    if (url.contains("hsql")) {
+      dataSource.driverClassName("org.hsqldb.jdbcDriver");
+    }
+    else if (url.contains("oracle")) {
+      dataSource.driverClassName("oracle.jdbc.OracleDriver");
+    }
+    else if (url.contains("mysql")) {
+      dataSource.driverClassName("com.mysql.jdbc.Driver");
+    }
+
+    return dataSource.build();
   }
 }

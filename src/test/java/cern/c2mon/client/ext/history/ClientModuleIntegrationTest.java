@@ -18,6 +18,7 @@ package cern.c2mon.client.ext.history;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -31,9 +32,9 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {
     "classpath:test-config/c2mon-historymanager-test.xml",
-    "classpath:config/c2mon-client-ext-history.xml"
-})
+    "classpath:config/c2mon-client-ext-history.xml" })
 @TestPropertySource("classpath:history.properties")
+@ActiveProfiles("test")
 public class ClientModuleIntegrationTest {
 
   /**
@@ -41,6 +42,6 @@ public class ClientModuleIntegrationTest {
    */
   @Test
   public void moduleStartUp() {
-    //do nothing
+    // do nothing
   }
 }

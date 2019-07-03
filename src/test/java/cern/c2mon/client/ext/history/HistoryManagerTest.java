@@ -32,6 +32,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -69,8 +70,8 @@ import cern.c2mon.shared.common.datatag.DataTagQualityImpl;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {
     "classpath:test-config/c2mon-historymanager-test.xml",
-    "classpath:test-config/spring-history-test.xml"
-})
+    "classpath:config/c2mon-client-ext-history.xml" })
+@ActiveProfiles("test")
 public class HistoryManagerTest {
 
   /*
