@@ -18,12 +18,10 @@ package cern.c2mon.client.ext.history.config;
 
 import javax.sql.DataSource;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
-import org.springframework.core.env.Environment;
 
 /**
  * @author Justin Lewis Salmon
@@ -33,8 +31,7 @@ public class HistoryDataSourceConfigTest {
 
   @Bean
   @Profile("test")
-  @ConfigurationProperties(prefix = "c2mon.client.history.jdbc")
-  public DataSource historyDataSource(Environment environment) {
+  public DataSource historyDataSource() {
 
     /**
      * HSQL only allows other JVMs to connect, if data is persisted on disk.<br/>
