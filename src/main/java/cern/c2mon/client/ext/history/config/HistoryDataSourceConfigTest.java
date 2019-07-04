@@ -29,6 +29,10 @@ import org.springframework.context.annotation.Profile;
 @Configuration
 public class HistoryDataSourceConfigTest {
 
+  /**
+   * This {@link DataSource} is only required for JUnit tests. The default is generated in
+   * {@link HistoryDataSourceConfig}
+   */
   @Bean
   @Profile("test")
   public DataSource historyDataSource() {
