@@ -48,11 +48,9 @@ public class HistoryDataSourceConfigTest {
 
     if (url.contains("hsql")) {
       dataSource.driverClassName("org.hsqldb.jdbcDriver");
-    }
-    else if (url.contains("oracle")) {
+    } else if (url.contains("oracle")) {
       dataSource.driverClassName("oracle.jdbc.OracleDriver");
-    }
-    else if (url.contains("mysql")) {
+    } else if (url.contains("mysql")) {
       dataSource.driverClassName("com.mysql.jdbc.Driver");
     }
 
