@@ -5,11 +5,11 @@
   <parent>
     <groupId>cern.c2mon.client</groupId>
     <artifactId>c2mon-client</artifactId>
-    <version>1.8.46-SNAPSHOT</version>
+    <version>1.9.2</version>
   </parent>
 
   <artifactId>c2mon-client-ext-history</artifactId>
-  <version>1.8.13-SNAPSHOT</version>
+  <version>1.9.2-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <scm>
