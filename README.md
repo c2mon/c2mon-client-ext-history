@@ -1,6 +1,6 @@
 # C2MON : CERN Control and Monitoring Platform
 ## Client extension module for fetching historical data
-[![build status](https://gitlab.cern.ch/c2mon/c2mon-client-ext-history/badges/master/build.svg)](https://gitlab.cern.ch/c2mon/c2mon-client-ext-history/commits/master)
+[![build status](https://gitlab.cern.ch/c2mon/c2mon-client-ext-history/badges/master/pipeline.svg)](https://gitlab.cern.ch/c2mon/c2mon-client-ext-history/commits/master)
 
 The CERN Control and Monitoring Platform (C2MON) is a heterogeneous data acquisition and monitoring framework. It contains many useful features
 such as historical metric persistence and browsing, command execution and alerting. It can be suitable for building many different types
@@ -19,9 +19,9 @@ a cross-platform, self-contained bootstrap mechanism for the build.
 
 ### Prerequisites
 
-[Git][] and [JDK 8 update 20 or later][JDK8 build]
+[Git][] and [JDK 11 or later][JDK11 build]
 
-Be sure that your `JAVA_HOME` environment variable points to the `jdk1.8.0` folder
+Be sure that your `JAVA_HOME` environment variable points to the `JDK 11` folder
 extracted from the JDK download.
 
 ### Check out sources
@@ -36,11 +36,11 @@ extracted from the JDK download.
 ## License
 C2MON is released under the [GNU LGPLv3 License][].
 
-[reference docs]: http://c2mon.web.cern.ch/c2mon/docs/latest/
-[issue tracker]: https://gitlab.cern.ch/c2mon/c2mon-client-ext-history/issues
+[reference docs]: http://c2mon.web.cern.ch/c2mon/docs/
+[issue tracker]: https://its.cern.ch/jira/issues/?jql=project%20%3D%20CM%20AND%20resolution%20%3D%20Unresolved%20AND%20component%20%3D%20%22Client%20Ext%20History%22%20ORDER%20BY%20priority%20DESC%2C%20updated%20DESC
 [Maven]: http://maven.apache.org
 [Git]: http://help.github.com/set-up-git-redirect
-[JDK8 build]: http://www.oracle.com/technetwork/java/javase/downloads
+[JDK11 build]: https://www.oracle.com/java/technologies/javase-jdk11-downloads.html
 [Pull requests]: http://help.github.com/send-pull-requests
 [contributor guidelines]: /CONTRIBUTING.md
 [GNU LGPLv3 License]: /LICENSE
