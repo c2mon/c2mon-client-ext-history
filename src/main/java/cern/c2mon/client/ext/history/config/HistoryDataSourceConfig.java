@@ -16,13 +16,14 @@
  *****************************************************************************/
 package cern.c2mon.client.ext.history.config;
 
-import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
+
+import javax.sql.DataSource;
 
 /**
  * @author Justin Lewis Salmon
@@ -41,10 +42,7 @@ public class HistoryDataSourceConfig {
   @Primary
   @Profile("!test")
   @ConfigurationProperties("c2mon.client.history.jdbc")
-  public HikariDataSource historyDataSource() {
-    return historyDataSourceProperties()
-      .initializeDataSourceBuilder()
-      .type(HikariDataSource.class)
-      .build();
+  public DataSource historyDataSource() {
+    return historyDataSourceProperties().initializeDataSourceBuilder().build();
   }
 }
