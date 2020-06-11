@@ -16,6 +16,7 @@
  *****************************************************************************/
 package cern.c2mon.client.ext.history.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -23,12 +24,15 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 
+import lombok.extern.slf4j.Slf4j;
+
 import javax.sql.DataSource;
 
 /**
  * @author Justin Lewis Salmon
  */
 @Configuration
+@Slf4j
 public class HistoryDataSourceConfig {
 
   @Bean
@@ -41,8 +45,8 @@ public class HistoryDataSourceConfig {
   @Bean
   @Primary
   @Profile("!test")
-  @ConfigurationProperties("c2mon.client.history.jdbc")
-  public DataSource historyDataSource() {
-    return historyDataSourceProperties().initializeDataSourceBuilder().build();
+  public DataSource historyDataSource(@Autowired DataSourceProperties historyDataSourceProperties) {
+	log.debug("Preparing client history JDBC datasource");
+    return historyDataSourceProperties.initializeDataSourceBuilder().build();
   }
 }
