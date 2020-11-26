@@ -18,13 +18,13 @@ package cern.c2mon.client.ext.history.updates;
 
 import java.sql.Timestamp;
 
-import junit.framework.Assert;
-
 import org.junit.Test;
+
+import junit.framework.Assert;
 
 import cern.c2mon.shared.client.tag.TagMode;
 import cern.c2mon.shared.common.datatag.DataTagQualityImpl;
-import cern.c2mon.shared.common.datatag.TagQualityStatus;
+import cern.c2mon.shared.common.datatag.util.TagQualityStatus;
 
 public class HistoryTagValueUpdateTest {
 

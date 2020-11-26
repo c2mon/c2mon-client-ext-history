@@ -21,16 +21,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import cern.c2mon.client.ext.history.dbaccess.HistoryMapper;
-import cern.c2mon.client.ext.history.dbaccess.beans.DailySnapshotRequestBean;
-import cern.c2mon.client.ext.history.dbaccess.beans.HistoryRecordBean;
-import cern.c2mon.client.ext.history.dbaccess.beans.InitialRecordHistoryRequestBean;
-import cern.c2mon.client.ext.history.dbaccess.beans.ShortTermLogHistoryRequestBean;
-import cern.c2mon.client.ext.history.dbaccess.beans.SupervisionEventRequestBean;
-import cern.c2mon.client.ext.history.dbaccess.beans.SupervisionRecordBean;
+import cern.c2mon.client.ext.history.dbaccess.beans.*;
 import cern.c2mon.shared.common.datatag.DataTagQuality;
 import cern.c2mon.shared.common.datatag.DataTagQualityImpl;
-import cern.c2mon.shared.common.datatag.TagQualityStatus;
+import cern.c2mon.shared.common.datatag.util.TagQualityStatus;
 
 /**
  * Used for testing purposes
@@ -39,7 +33,6 @@ import cern.c2mon.shared.common.datatag.TagQualityStatus;
  *
  */
 public class FakeHistoryMapperImpl implements HistoryMapper {
-
   
   private static final long MINIMUM_TIME_BETWEEN_RECORDS = 1000;
   
