@@ -1,5 +1,5 @@
 /******************************************************************************
- * Copyright (C) 2010-2016 CERN. All rights not expressly granted are reserved.
+ * Copyright (C) 2010-2021 CERN. All rights not expressly granted are reserved.
  * 
  * This file is part of the CERN Control and Monitoring Platform 'C2MON'.
  * C2MON is free software: you can redistribute it and/or modify it under the
@@ -17,6 +17,7 @@
 package cern.c2mon.client.ext.history;
 
 import cern.c2mon.client.ext.history.alarm.AlarmHistoryService;
+import cern.c2mon.client.ext.history.command.CommandRecordService;
 import org.springframework.context.ApplicationContext;
 
 import cern.c2mon.client.core.C2monServiceGateway;
@@ -38,6 +39,8 @@ public class C2monHistoryGateway {
 
   private static AlarmHistoryService alarmHistoryService = null;
 
+  private static CommandRecordService commandRecordService = null;
+
   public static ApplicationContext context;
 
   private C2monHistoryGateway() {}
@@ -54,6 +57,7 @@ public class C2monHistoryGateway {
       context = C2monServiceGateway.getApplicationContext();
       historyManager = context.getBean(C2monHistoryManager.class);
       alarmHistoryService = context.getBean(AlarmHistoryService.class);
+      commandRecordService = context.getBean(CommandRecordService.class);
     }
   }
 
@@ -77,5 +81,16 @@ public class C2monHistoryGateway {
     }
 
     return alarmHistoryService;
+  }
+
+  /**
+   * @return the {@link CommandRecordService} instance
+   */
+  public static synchronized CommandRecordService getCommandRecordService() {
+    if (context == null) {
+      initialize();
+    }
+
+    return commandRecordService;
   }
 }
