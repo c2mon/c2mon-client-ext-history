@@ -1,0 +1,13 @@
+[CBNG] [product.xml] 'directory' attribute: Ignoring everything after 'client' for value c2mon/client/c2mon-client-ext-history 
+:cleanEclipseClasspath
+:cleanEclipseJdt
+:cleanEclipseProject
+:cleanEclipse UP-TO-DATE
+:eclipseClasspath
+:eclipseJdt
+:eclipseProject
+:eclipse
+
+
+BUILD SUCCESSFUL
+

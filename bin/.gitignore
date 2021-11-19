@@ -1,0 +1,28 @@
+# Build files
+*.class
+build/
+target/
+temp.json
+*.log
+
+# IDE files
+*.iml
+.idea/
+.settings/
+.classpath
+.project
+.gradle/
+
+# Package Files
+*.jar
+*.war
+*.ear
+
+# Virtual machine crash logs
+hs_err_pid*
+
+# MacOSX files
+.DS_Store
+
+activemq-data/
+/bin/

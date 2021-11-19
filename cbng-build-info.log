@@ -1,0 +1,392 @@
+[QUIET] - = Configuring CBNG for root project 'c2mon-client-ext-history'
+[INFO] - Could not find DependencyResolver instance among the project properties. Expected property was: resolver
+[QUIET] - CBNG configuration:
+[QUIET] - -------------------
+[QUIET] - CBNG Version:       3.10.9
+[QUIET] - CBNG Core Version:  2.3.6
+[QUIET] - CAS Version:        0.9.21_1
+[QUIET] - Artifactory URL:    http://artifactory.cern.ch
+[QUIET] - gradleConfigDir:    /nfs/cs-ccr-builds/data/CBNG/3.10.9/gradle/cbng-config
+[QUIET] - gradle Version:     5.4.1
+[QUIET] - Java Version:       11.0.14.1
+[QUIET] - -------------------
+[QUIET] - User of execution:  mbuttner
+[QUIET] - Working directory:  /opt/mbuttner/git/c2mon-client-ext-history
+[QUIET] - Host of execution:  cwe-513-vol717.cern.ch
+[QUIET] - Start of execution: Tue Sep 13 15:18:46 CEST 2022
+[QUIET] - Build ID:           220913-131846@8674@cwe-513-vol717.cern.ch@13B3876E
+[QUIET] - -------------------
+[QUIET] - Project directory:  /opt/mbuttner/git/c2mon-client-ext-history
+[QUIET] - Project build ID:   220913-131846@8674@cwe-513-vol717.cern.ch@6F194442
+[INFO] - This is NOT a release server
+[INFO] - === Configuring CBNG project...
+[INFO] - Indexed GAVC Search enabled: true
+[INFO] - Could not get SVN repository from directory /opt/mbuttner/git/c2mon-client-ext-history. See debug log for stacktrace. Fallback using other clients.
+[INFO] - Could not get SVN repository from directory /opt/mbuttner/git/c2mon-client-ext-history. See debug log for stacktrace. Fallback using other clients.
+[INFO] - Set maven url in CbngArtifactUploaderPlugin to http://artifactory.cern.ch/beco-development-local
+[INFO] - Could not get SVN repository from directory /opt/mbuttner/git/c2mon-client-ext-history. See debug log for stacktrace. Fallback using other clients.
+[INFO] - Could not get SVN repository from directory /opt/mbuttner/git/c2mon-client-ext-history. See debug log for stacktrace. Fallback using other clients.
+a=c2mon-client-ext-history|g=cern.c2mon.client|v=2.0.1-20220913-151846|repos=beco-release-local,beco-development-local
+[INFO] - Indexed GAVC search has failed, using Artifactory GAVC search
+[INFO] - Detected standard Maven source set layout
+[WARN] - Test execution is disabled for this project. To turn it back, remove the junit.enabled=false property
+[INFO] - Evaluating root project 'c2mon-client-ext-history' using build file '/opt/mbuttner/git/c2mon-client-ext-history/build.gradle'.
+[INFO] - == InitGradle/cbngTracing afterEvaluate BEGIN
+[INFO] - == InitGradle/cbngTracing afterEvaluate END
+[INFO] - == ConfigGradle afterEvaluate BEGIN
+[INFO] - == ConfigGradle afterEvaluate END
+[QUIET] - Source compatibility set to default 1.8
+[QUIET] - Target compatibility set to default 1.8
+[QUIET] - Release flag enabled with version 1.8
+[INFO] - Source compatibility is 1.8
+[INFO] - Target compatibility is 1.8
+[INFO] - == Configuring publication 'cbng' (afterEvaluate) BEGIN
+[INFO] - == Configuring publication 'cbng' (afterEvaluate) END
+[INFO] - == CommonTasksGradle/tasks.withType(Test) afterEvaluate BEGIN
+[INFO] - == CommonTasksGradle/tasks.withType(Test) afterEvaluate END
+[INFO] - All projects evaluated.
+[INFO] - Selected primary task 'devrelease' from project :
+[INFO] - == Resolving :testRuntimeClasspath
+[INFO] - Resolved (testRuntimeClasspath) cern.c2mon.client:c2mon-client-core:CTX to cern.c2mon.client:c2mon-client-core:1.20.5
+[INFO] - The null version of lombok has been forced to PRO
+[INFO] - Resolved (testRuntimeClasspath) org.projectlombok:lombok:<null> to org.projectlombok:lombok:1.18.22
+[INFO] - The null version of xml-apis has been forced to PRO
+[INFO] - Resolved (testRuntimeClasspath) xml-apis:xml-apis:<null> to xml-apis:xml-apis:1.4.01
+[INFO] - The null version of junit has been forced to PRO
+[INFO] - Resolved (testRuntimeClasspath) junit:junit:<null> to junit:junit:4.13.2
+[QUIET] - Resolved cern.c2mon.client:c2mon-client-core:1.20.5 -> [cern.c2mon.client:c2mon-client-common:1.20.5, cern.c2mon.shared:c2mon-shared-client:1.20.5, cern.c2mon.shared:c2mon-shared-common:1.20.5, cern.c2mon.shared:c2mon-shared-persistence-manager:1.20.5, cern.c2mon.shared:c2mon-shared-rule:1.20.5, cern.c2mon.shared:c2mon-shared-util:1.20.5, ch.qos.logback:logback-classic:1.2.3, ch.qos.logback:logback-core:1.2.3, com.fasterxml.jackson.core:jackson-annotations:2.9.2, com.fasterxml.jackson.core:jackson-core:2.9.2, com.fasterxml.jackson.core:jackson-databind:2.9.2, com.google.code.gson:gson:2.8.4, com.google.guava:guava:19.0, com.thoughtworks.xstream:xstream:1.4.10, commons-codec:commons-codec:1.11, commons-lang:commons-lang:2.5, commons-logging:commons-logging:1.2, commons-net:commons-net:3.6, io.searchbox:jest:2.0.3, io.searchbox:jest-common:2.0.3, javax.activation:activation:1.1, javax.activation:javax.activation-api:1.2.0, javax.annotation:javax.annotation-api:1.3.2, javax.mail:mail:1.4, javax.xml.bind:jaxb-api:2.3.1, org.apache.activemq:activemq-broker:5.15.2, org.apache.activemq:activemq-client:5.15.2, org.apache.activemq:activemq-http:5.15.2, org.apache.activemq:activemq-jms-pool:5.15.2, org.apache.activemq:activemq-mqtt:5.15.2, org.apache.activemq:activemq-openwire-legacy:5.15.2, org.apache.activemq:activemq-pool:5.15.2, org.apache.activemq:activemq-spring:5.15.2, org.apache.activemq:activemq-stomp:5.15.2, org.apache.activemq.protobuf:activemq-protobuf:1.1, org.apache.commons:commons-lang3:3.4, org.apache.commons:commons-pool2:2.4.2, org.apache.geronimo.specs:geronimo-j2ee-management_1.1_spec:1.0.1, org.apache.geronimo.specs:geronimo-jms_1.1_spec:1.1.1, org.apache.geronimo.specs:geronimo-jta_1.0.1B_spec:1.0.1, org.apache.httpcomponents:httpasyncclient:4.1.1, org.apache.httpcomponents:httpclient:4.5.10, org.apache.httpcomponents:httpcore:4.4.12, org.apache.httpcomponents:httpcore-nio:4.4.4, org.apache.logging.log4j:log4j-api:2.11.1, org.apache.logging.log4j:log4j-to-slf4j:2.11.1, org.apache.xbean:xbean-spring:4.2, org.eclipse.jetty.aggregate:jetty-all:9.2.22.v20170606, org.fusesource.hawtbuf:hawtbuf:1.11, org.fusesource.hawtdispatch:hawtdispatch:1.22, org.fusesource.hawtdispatch:hawtdispatch-transport:1.22, org.fusesource.mqtt-client:mqtt-client:1.14, org.projectlombok:lombok:1.18.22, org.simpleframework:simple-xml:2.6.1, org.slf4j:jul-to-slf4j:1.7.25, org.slf4j:slf4j-api:1.7.30, org.springframework:spring-aop:5.1.3.RELEASE, org.springframework:spring-beans:5.1.3.RELEASE, org.springframework:spring-context:5.1.2.RELEASE, org.springframework:spring-core:5.1.3.RELEASE, org.springframework:spring-expression:5.1.2.RELEASE, org.springframework:spring-jcl:5.1.3.RELEASE, org.springframework:spring-jms:5.1.2.RELEASE, org.springframework:spring-messaging:5.1.2.RELEASE, org.springframework:spring-tx:5.1.3.RELEASE, org.springframework.boot:spring-boot:2.1.1.RELEASE, org.springframework.boot:spring-boot-autoconfigure:2.1.1.RELEASE, org.springframework.boot:spring-boot-configuration-processor:2.1.1.RELEASE, org.springframework.boot:spring-boot-starter-logging:2.1.1.RELEASE, stax:stax:1.2.0, stax:stax-api:1.0.1, xerces:xercesImpl:2.11.0, xml-apis:xml-apis:1.4.01, xmlpull:xmlpull:1.1.3.1, xpp3:xpp3:1.1.3.3, xpp3:xpp3_min:1.1.4c]
+[QUIET] - Resolved mysql:mysql-connector-java:5.1.38 -> []
+[QUIET] - Resolved org.mybatis:mybatis-spring:2.0.6 -> []
+[QUIET] - Resolved org.hsqldb:hsqldb:2.3.4 -> []
+[QUIET] - Resolved org.springframework:spring-context:5.1.2.RELEASE -> [org.springframework:spring-aop:5.1.3.RELEASE, org.springframework:spring-beans:5.1.3.RELEASE, org.springframework:spring-core:5.1.3.RELEASE, org.springframework:spring-expression:5.1.2.RELEASE, org.springframework:spring-jcl:5.1.3.RELEASE]
+[QUIET] - Resolved org.springframework.boot:spring-boot:2.1.1.RELEASE -> [org.springframework:spring-aop:5.1.3.RELEASE, org.springframework:spring-beans:5.1.3.RELEASE, org.springframework:spring-context:5.1.2.RELEASE, org.springframework:spring-core:5.1.3.RELEASE, org.springframework:spring-expression:5.1.2.RELEASE, org.springframework:spring-jcl:5.1.3.RELEASE]
+[QUIET] - Resolved org.springframework.boot:spring-boot-starter:2.1.1.RELEASE -> [ch.qos.logback:logback-classic:1.2.3, ch.qos.logback:logback-core:1.2.3, javax.annotation:javax.annotation-api:1.3.2, org.apache.logging.log4j:log4j-api:2.11.1, org.apache.logging.log4j:log4j-to-slf4j:2.11.1, org.slf4j:jul-to-slf4j:1.7.25, org.slf4j:slf4j-api:1.7.30, org.springframework:spring-aop:5.1.3.RELEASE, org.springframework:spring-beans:5.1.3.RELEASE, org.springframework:spring-context:5.1.2.RELEASE, org.springframework:spring-core:5.1.3.RELEASE, org.springframework:spring-expression:5.1.2.RELEASE, org.springframework:spring-jcl:5.1.3.RELEASE, org.springframework.boot:spring-boot:2.1.1.RELEASE, org.springframework.boot:spring-boot-autoconfigure:2.1.1.RELEASE, org.springframework.boot:spring-boot-starter-logging:2.1.1.RELEASE, org.yaml:snakeyaml:1.23]
+[QUIET] - Resolved org.springframework.boot:spring-boot-starter-logging:2.1.1.RELEASE -> [ch.qos.logback:logback-classic:1.2.3, ch.qos.logback:logback-core:1.2.3, org.apache.logging.log4j:log4j-api:2.11.1, org.apache.logging.log4j:log4j-to-slf4j:2.11.1, org.slf4j:jul-to-slf4j:1.7.25, org.slf4j:slf4j-api:1.7.30]
+[QUIET] - Resolved org.springframework.boot:spring-boot-starter-data-jpa:2.1.1.RELEASE -> [antlr:antlr:2.7.7, ch.qos.logback:logback-classic:1.2.3, ch.qos.logback:logback-core:1.2.3, com.fasterxml:classmate:1.3.4, com.zaxxer:HikariCP:3.2.0, javax.activation:javax.activation-api:1.2.0, javax.annotation:javax.annotation-api:1.3.2, javax.persistence:javax.persistence-api:2.2, javax.transaction:javax.transaction-api:1.3, javax.xml.bind:jaxb-api:2.3.1, net.bytebuddy:byte-buddy:1.9.3, org.apache.logging.log4j:log4j-api:2.11.1, org.apache.logging.log4j:log4j-to-slf4j:2.11.1, org.aspectj:aspectjweaver:1.9.2, org.dom4j:dom4j:2.1.1, org.hibernate:hibernate-core:5.3.7.Final, org.hibernate.common:hibernate-commons-annotations:5.0.4.Final, org.javassist:javassist:3.23.1-GA, org.jboss:jandex:2.0.5.Final, org.jboss.logging:jboss-logging:3.3.2.Final, org.slf4j:jul-to-slf4j:1.7.25, org.slf4j:slf4j-api:1.7.30, org.springframework:spring-aop:5.1.3.RELEASE, org.springframework:spring-aspects:5.1.3.RELEASE, org.springframework:spring-beans:5.1.3.RELEASE, org.springframework:spring-context:5.1.2.RELEASE, org.springframework:spring-core:5.1.3.RELEASE, org.springframework:spring-expression:5.1.2.RELEASE, org.springframework:spring-jcl:5.1.3.RELEASE, org.springframework:spring-jdbc:5.1.3.RELEASE, org.springframework:spring-orm:5.1.3.RELEASE, org.springframework:spring-tx:5.1.3.RELEASE, org.springframework.boot:spring-boot:2.1.1.RELEASE, org.springframework.boot:spring-boot-autoconfigure:2.1.1.RELEASE, org.springframework.boot:spring-boot-starter:2.1.1.RELEASE, org.springframework.boot:spring-boot-starter-aop:2.1.1.RELEASE, org.springframework.boot:spring-boot-starter-jdbc:2.1.1.RELEASE, org.springframework.boot:spring-boot-starter-logging:2.1.1.RELEASE, org.springframework.data:spring-data-commons:2.1.3.RELEASE, org.springframework.data:spring-data-jpa:2.1.3.RELEASE, org.yaml:snakeyaml:1.23]
+[QUIET] - Resolved org.springframework.boot:spring-boot-configuration-processor:2.1.1.RELEASE -> []
+[QUIET] - Resolved commons-dbcp:commons-dbcp:1.4 -> [commons-pool:commons-pool:1.5.4]
+[QUIET] - Resolved org.mybatis:mybatis:3.5.6 -> []
+[QUIET] - Resolved org.projectlombok:lombok:1.18.22 -> []
+[QUIET] - Resolved xml-apis:xml-apis:1.4.01 -> []
+[QUIET] - Resolved cern.devops:co-bugfix-dependencies:0.1.4 -> []
+[QUIET] - Resolved cern.devops:co-bugfix-enforced-dependencies:0.1.4 -> []
+[QUIET] - Resolved junit:junit:4.13.2 -> [org.hamcrest:hamcrest-core:1.3]
+[QUIET] - Resolved org.springframework.boot:spring-boot-starter-test:2.1.1.RELEASE -> [ch.qos.logback:logback-classic:1.2.3, ch.qos.logback:logback-core:1.2.3, com.jayway.jsonpath:json-path:2.4.0, com.vaadin.external.google:android-json:0.0.20131108.vaadin1, javax.annotation:javax.annotation-api:1.3.2, junit:junit:4.13.2, net.bytebuddy:byte-buddy:1.9.3, net.bytebuddy:byte-buddy-agent:1.9.3, net.minidev:accessors-smart:1.2, net.minidev:json-smart:2.3, org.apache.logging.log4j:log4j-api:2.11.1, org.apache.logging.log4j:log4j-to-slf4j:2.11.1, org.assertj:assertj-core:3.11.1, org.hamcrest:hamcrest-core:1.3, org.hamcrest:hamcrest-library:1.3, org.mockito:mockito-core:2.23.4, org.objenesis:objenesis:2.6, org.ow2.asm:asm:5.0.4, org.skyscreamer:jsonassert:1.5.0, org.slf4j:jul-to-slf4j:1.7.25, org.slf4j:slf4j-api:1.7.30, org.springframework:spring-aop:5.1.3.RELEASE, org.springframework:spring-beans:5.1.3.RELEASE, org.springframework:spring-context:5.1.2.RELEASE, org.springframework:spring-core:5.1.3.RELEASE, org.springframework:spring-expression:5.1.2.RELEASE, org.springframework:spring-jcl:5.1.3.RELEASE, org.springframework:spring-test:5.1.3.RELEASE, org.springframework.boot:spring-boot:2.1.1.RELEASE, org.springframework.boot:spring-boot-autoconfigure:2.1.1.RELEASE, org.springframework.boot:spring-boot-starter:2.1.1.RELEASE, org.springframework.boot:spring-boot-starter-logging:2.1.1.RELEASE, org.springframework.boot:spring-boot-test:2.1.1.RELEASE, org.springframework.boot:spring-boot-test-autoconfigure:2.1.1.RELEASE, org.xmlunit:xmlunit-core:2.6.2, org.yaml:snakeyaml:1.23]
+[QUIET] - Resolved org.easymock:easymock:3.4 -> [org.objenesis:objenesis:2.6]
+[INFO] - == Resolved :testRuntimeClasspath 
+[INFO] - == Resolving :compileClasspath
+[INFO] - Resolved (compileClasspath) cern.c2mon.client:c2mon-client-core:CTX to cern.c2mon.client:c2mon-client-core:1.20.5
+[INFO] - Resolved (compileClasspath) org.projectlombok:lombok:<null> to org.projectlombok:lombok:1.18.22
+[INFO] - Resolved (compileClasspath) xml-apis:xml-apis:<null> to xml-apis:xml-apis:1.4.01
+[INFO] - == Resolved :compileClasspath 
+[INFO] - Resolved (testCompileClasspath) cern.c2mon.client:c2mon-client-core:CTX to cern.c2mon.client:c2mon-client-core:1.20.5
+[INFO] - Resolved (testCompileClasspath) org.projectlombok:lombok:<null> to org.projectlombok:lombok:1.18.22
+[INFO] - Resolved (testCompileClasspath) xml-apis:xml-apis:<null> to xml-apis:xml-apis:1.4.01
+[INFO] - Resolved (testCompileClasspath) junit:junit:<null> to junit:junit:4.13.2
+[INFO] - Tasks to be executed: [task ':generatePomFileForCbngPublication', task ':artifactChecker', task ':fesaJapcCodegen', task ':compileJava', task ':processResources', task ':classes', task ':jar', task ':javadoc', task ':java2html', task ':javadocJar', task ':sourcesJar', task ':compileTestJava', task ':processTestResources', task ':testClasses', task ':test', task ':vcsTag', task ':publishCbngPublicationToCbngMavenRepository', task ':publish', task ':registerPublicationInCAS', task ':attachDependencyProperties', task ':postUploadDevToOperation', task ':devrelease', task ':afterPublish']
+[INFO] - :generatePomFileForCbngPublication (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Caching disabled for task ':generatePomFileForCbngPublication' because:
+  Build cache is disabled
+[INFO] - Task ':generatePomFileForCbngPublication' is not up-to-date because:
+  Task.upToDateWhen is false.
+[INFO] - == Resolving :runtimeClasspath
+[INFO] - Resolved (runtimeClasspath) cern.c2mon.client:c2mon-client-core:CTX to cern.c2mon.client:c2mon-client-core:1.20.5
+[INFO] - Resolved (runtimeClasspath) org.projectlombok:lombok:<null> to org.projectlombok:lombok:1.18.22
+[INFO] - Resolved (runtimeClasspath) xml-apis:xml-apis:<null> to xml-apis:xml-apis:1.4.01
+[INFO] - == Resolved :runtimeClasspath 
+:generatePomFileForCbngPublication
+[INFO] - :generatePomFileForCbngPublication (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.251 secs.
+[INFO] - :artifactChecker (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Caching disabled for task ':artifactChecker' because:
+  Build cache is disabled
+[INFO] - Task ':artifactChecker' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+[INFO] - The configuration needs to be reloaded from: /tmp/ArtifactChecker5862209259279509310.json.tmp
+[INFO] - The configuration has been reloaded from: /tmp/ArtifactChecker5862209259279509310.json.tmp
+:artifactChecker
+[INFO] - :artifactChecker (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.076 secs.
+[INFO] - :fesaJapcCodegen (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Skipping task ':fesaJapcCodegen' as task onlyIf is false.
+:fesaJapcCodegen SKIPPED
+[INFO] - :fesaJapcCodegen (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.002 secs.
+[INFO] - :compileJava (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Caching disabled for task ':compileJava' because:
+  Build cache is disabled
+[INFO] - Skipping task ':compileJava' as it is up-to-date.
+:compileJava UP-TO-DATE
+[INFO] - :compileJava (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.094 secs.
+[INFO] - :processResources (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Caching disabled for task ':processResources' because:
+  Build cache is disabled
+[INFO] - Skipping task ':processResources' as it is up-to-date.
+:processResources UP-TO-DATE
+[INFO] - :processResources (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.005 secs.
+[INFO] - :classes (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Skipping task ':classes' as it has no actions.
+:classes UP-TO-DATE
+[INFO] - :classes (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.0 secs.
+[INFO] - :jar (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Caching disabled for task ':jar' because:
+  Build cache is disabled
+[INFO] - Task ':jar' is not up-to-date because:
+  Additional action for task ':jar': was implemented by the Java lambda 'cern.devops.cbng.plugins.java.extender.JarTaskExtender$$Lambda$207/0x0000000840700840'. Using Java lambdas is not supported, use an (anonymous) inner class instead.
+:jar
+[INFO] - :jar (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.079 secs.
+[INFO] - :javadoc (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Caching disabled for task ':javadoc' because:
+  Build cache is disabled
+[INFO] - Task ':javadoc' is not up-to-date because:
+  Additional action for task ':javadoc': was implemented by the Java lambda 'cern.devops.cbng.javadoc.JavadocGradle$$Lambda$309/0x00000008407bdc40'. Using Java lambdas is not supported, use an (anonymous) inner class instead.
+[INFO] - file or directory '/opt/mbuttner/git/c2mon-client-ext-history/src/generated', not found
+[INFO] - Starting process 'command '/usr/java/jdk1.11.0_14/bin/javadoc''. Working directory: /opt/mbuttner/git/c2mon-client-ext-history Command: /usr/java/jdk1.11.0_14/bin/javadoc @/opt/mbuttner/git/c2mon-client-ext-history/build/tmp/javadoc/javadoc.options
+[INFO] - Successfully started process 'command '/usr/java/jdk1.11.0_14/bin/javadoc''
+:javadoc
+Picked up JAVA_TOOL_OPTIONS: -Dsun.awt.disablegrab=true
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/beans/HistoryRecordBean.java:232: warning - @param argument "tagValue" is not a parameter name.
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/SupervisionEventRequest.java:23: warning - Tag @link: reference not found: HistoryProvider#getSupervisionEvents(java.util.Collection)
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryStore.java:612: warning - Tag @link: reference not found: #addInitialHistoryData(Collection, Timestamp)
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryStore.java:866: warning - Tag @link: reference not found: DataTagHistory
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryStore.java:1112: warning - Tag @see: reference not found: #addInitialHistoryData(Collection)
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/HistorySessionFactory.java:57: warning - Tag @link: reference not found: Tag
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/HistorySessionFactory.java:58: warning - Tag @link: reference not found: Tag#getType()
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/HistorySessionFactory.java:77: warning - Tag @link: reference not found: Tag
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/HistorySessionFactory.java:78: warning - Tag @link: reference not found: Tag#getType()
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/HistorySessionFactory.java:92: warning - Tag @link: reference not found: SavedHistoryEventProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/event/HistoryPlayerListener.java:24: warning - Tag @link: reference not found: cern.c2mon.client.ext.history.HistoryPlayer
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/event/PlaybackControlListener.java:20: warning - Tag @link: reference not found: PlaybackControl
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/player/event/ClockListener.java:20: warning - Tag @link: reference not found: Clock
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/event/TimerQueueListener.java:21: warning - Tag @link: reference not found: TimerQueue
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/HistoryPlayerNotActiveException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/HistoryProviderException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/IllegalTimespanException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/NoHistoryProviderException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/exceptions/NoHistoryProviderAvailableException.java:20: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/id/TagValueUpdateId.java:20: warning - Tag @link: reference not found: TagValueUpdate
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/HistoryPlayerCoreAccess.java:119: warning - Tag @see: reference not found: #registerTagUpdateListener(TagUpdateListener, Long, TagValueUpdate)
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/HistoryPlayerImpl.java:494: warning - Tag @see: reference not found: #registerTagUpdateListener(TagUpdateListener, Long, TagValueUpdate)
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerTask.java:24: warning - Tag @see: reference not found: Timer
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerTask.java:127: warning - invalid usage of tag >
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerTask.java:142: warning - Tag @see: reference not found: Date#getTime()
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTag.java:30: warning - Tag @see: reference not found: TagService#subscribe(HistoryTag)
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagConfiguration.java:25: warning - Tag @see: reference not found: HistoryTagExpressionInterpreter
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagConfiguration.java:26: warning - Tag @see: reference not found: HistoryTagImpl
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagConfiguration.java:73: warning - Tag @link: reference not found: HistoryTagExpressionInterpreter
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagExpressionException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagRecord.java:26: warning - Tag @link: reference not found: HistoryTagImpl
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagRecord.java:27: warning - Tag @link: reference not found: HistoryTagImpl#getValue()
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagResultType.java:23: warning - Tag @link: reference not found: HistoryTagImpl
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/tag/HistoryTagImpl.java:50: warning - Tag @see: reference not found: HistoryTagManager#subscribe(HistoryTagImpl)
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/tag/HistoryTagImpl.java:103: warning - Tag @see: reference not found: HistoryTagManager#subscribe(HistoryTagImpl)
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/tag/HistoryTagImpl.java:119: warning - Tag @see: reference not found: HistoryTagManager#subscribe(HistoryTagImpl)
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/updates/HistoryTagValueUpdateImpl.java:272: warning - Tag @see: reference not found: #fromXml(String)
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/util/BeanConverterUtil.java:61: warning - Tag @link: reference not found: Tag
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/data/utilities/MemoryConsumptionAdviser.java:27: warning - Tag @link: reference not found: HistoryLoader
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/SupervisionEventRequest.java:23: warning - Tag @link: reference not found: HistoryProvider#getSupervisionEvents(java.util.Collection)
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/event/HistoryPlayerListener.java:24: warning - Tag @link: reference not found: cern.c2mon.client.ext.history.HistoryPlayer
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/event/PlaybackControlListener.java:20: warning - Tag @link: reference not found: PlaybackControl
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/HistoryPlayerNotActiveException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/HistoryProviderException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/IllegalTimespanException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/NoHistoryProviderException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/id/TagValueUpdateId.java:20: warning - Tag @link: reference not found: TagValueUpdate
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagRecord.java:26: warning - Tag @link: reference not found: HistoryTagImpl
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagRecord.java:27: warning - Tag @link: reference not found: HistoryTagImpl#getValue()
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagResultType.java:23: warning - Tag @link: reference not found: HistoryTagImpl
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagExpressionException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/exceptions/NoHistoryProviderAvailableException.java:20: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/player/event/ClockListener.java:20: warning - Tag @link: reference not found: Clock
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/event/TimerQueueListener.java:21: warning - Tag @link: reference not found: TimerQueue
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/player/event/ClockListener.java:20: warning - Tag @link: reference not found: Clock
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/event/HistoryPlayerListener.java:24: warning - Tag @link: reference not found: cern.c2mon.client.ext.history.HistoryPlayer
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/HistoryPlayerNotActiveException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/HistoryProviderException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagExpressionException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagRecord.java:26: warning - Tag @link: reference not found: HistoryTagImpl
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagRecord.java:27: warning - Tag @link: reference not found: HistoryTagImpl#getValue()
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagResultType.java:23: warning - Tag @link: reference not found: HistoryTagImpl
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/IllegalTimespanException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/exceptions/NoHistoryProviderAvailableException.java:20: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/NoHistoryProviderException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/event/PlaybackControlListener.java:20: warning - Tag @link: reference not found: PlaybackControl
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/SupervisionEventRequest.java:23: warning - Tag @link: reference not found: HistoryProvider#getSupervisionEvents(java.util.Collection)
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/id/TagValueUpdateId.java:20: warning - Tag @link: reference not found: TagValueUpdate
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/event/TimerQueueListener.java:21: warning - Tag @link: reference not found: TimerQueue
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/player/event/ClockListener.java:20: warning - Tag @link: reference not found: Clock
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/event/HistoryPlayerListener.java:24: warning - Tag @link: reference not found: cern.c2mon.client.ext.history.HistoryPlayer
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/HistoryPlayerNotActiveException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/HistoryProviderException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagExpressionException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagRecord.java:26: warning - Tag @link: reference not found: HistoryTagImpl
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagRecord.java:27: warning - Tag @link: reference not found: HistoryTagImpl#getValue()
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagResultType.java:23: warning - Tag @link: reference not found: HistoryTagImpl
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/IllegalTimespanException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/exceptions/NoHistoryProviderAvailableException.java:20: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/NoHistoryProviderException.java:21: warning - Tag @link: reference not found: HistoryProvider
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/event/PlaybackControlListener.java:20: warning - Tag @link: reference not found: PlaybackControl
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/SupervisionEventRequest.java:23: warning - Tag @link: reference not found: HistoryProvider#getSupervisionEvents(java.util.Collection)
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/id/TagValueUpdateId.java:20: warning - Tag @link: reference not found: TagValueUpdate
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/event/TimerQueueListener.java:21: warning - Tag @link: reference not found: TimerQueue
+84 warnings
+[INFO] - :javadoc (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 2.147 secs.
+[INFO] - :java2html (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Skipping task ':java2html' as task onlyIf is false.
+:java2html SKIPPED
+[INFO] - :java2html (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.0 secs.
+[INFO] - :javadocJar (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Caching disabled for task ':javadocJar' because:
+  Build cache is disabled
+[INFO] - Task ':javadocJar' is not up-to-date because:
+  Output property 'archiveFile' file /opt/mbuttner/git/c2mon-client-ext-history/build/libs/c2mon-client-ext-history-2.0.0-20220913-151541-javadoc.jar has been removed.
+:javadocJar
+[INFO] - :javadocJar (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.137 secs.
+[INFO] - :sourcesJar (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Caching disabled for task ':sourcesJar' because:
+  Build cache is disabled
+[INFO] - Task ':sourcesJar' is not up-to-date because:
+  Output property 'archiveFile' file /opt/mbuttner/git/c2mon-client-ext-history/build/libs/c2mon-client-ext-history-2.0.0-20220913-151541-sources.jar has been removed.
+[INFO] - file or directory '/opt/mbuttner/git/c2mon-client-ext-history/src/generated', not found
+:sourcesJar
+[INFO] - :sourcesJar (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.038 secs.
+[INFO] - :compileTestJava (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Caching disabled for task ':compileTestJava' because:
+  Build cache is disabled
+[INFO] - Skipping task ':compileTestJava' as it is up-to-date.
+:compileTestJava UP-TO-DATE
+[INFO] - :compileTestJava (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.029 secs.
+[INFO] - :processTestResources (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Caching disabled for task ':processTestResources' because:
+  Build cache is disabled
+[INFO] - Skipping task ':processTestResources' as it is up-to-date.
+:processTestResources UP-TO-DATE
+[INFO] - :processTestResources (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.002 secs.
+[INFO] - :testClasses (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Skipping task ':testClasses' as it has no actions.
+:testClasses UP-TO-DATE
+[INFO] - :testClasses (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.0 secs.
+[INFO] - :test (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Skipping task ':test' as task onlyIf is false.
+:test SKIPPED
+[INFO] - :test (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.0 secs.
+[INFO] - :vcsTag (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Caching disabled for task ':vcsTag' because:
+  Build cache is disabled
+[INFO] - Task ':vcsTag' is not up-to-date because:
+  Task.upToDateWhen is false.
+:vcsTag
+[INFO] - :vcsTag (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.007 secs.
+[INFO] - :publishCbngPublicationToCbngMavenRepository (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Caching disabled for task ':publishCbngPublicationToCbngMavenRepository' because:
+  Build cache is disabled
+[INFO] - Task ':publishCbngPublicationToCbngMavenRepository' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+[INFO] - Publishing to repository 'cbngMaven' (http://artifactory.cern.ch/beco-development-local)
+[INFO] - Deploying to http://artifactory.cern.ch/beco-development-local
+[INFO] - Uploading: cern/c2mon/client/c2mon-client-ext-history/2.0.1-20220913-151846/c2mon-client-ext-history-2.0.1-20220913-151846.jar to repository remote at http://artifactory.cern.ch/beco-development-local/
+[INFO] - Uploading: cern/c2mon/client/c2mon-client-ext-history/2.0.1-20220913-151846/c2mon-client-ext-history-2.0.1-20220913-151846.pom to repository remote at http://artifactory.cern.ch/beco-development-local/
+[INFO] - Uploading: cern/c2mon/client/c2mon-client-ext-history/2.0.1-20220913-151846/c2mon-client-ext-history-2.0.1-20220913-151846-javadoc.jar to repository remote at http://artifactory.cern.ch/beco-development-local/
+[INFO] - Uploading: cern/c2mon/client/c2mon-client-ext-history/2.0.1-20220913-151846/c2mon-client-ext-history-2.0.1-20220913-151846-sources.jar to repository remote at http://artifactory.cern.ch/beco-development-local/
+[INFO] - Downloading: cern/c2mon/client/c2mon-client-ext-history/maven-metadata.xml from repository remote at http://artifactory.cern.ch/beco-development-local/
+[INFO] - Uploading: cern/c2mon/client/c2mon-client-ext-history/maven-metadata.xml to repository remote at http://artifactory.cern.ch/beco-development-local/
+:publishCbngPublicationToCbngMavenRepository
+[INFO] - :publishCbngPublicationToCbngMavenRepository (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 1.099 secs.
+[INFO] - :publish (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Skipping task ':publish' as it has no actions.
+:publish
+[INFO] - :publish (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.0 secs.
+[INFO] - :registerPublicationInCAS (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Caching disabled for task ':registerPublicationInCAS' because:
+  Build cache is disabled
+[INFO] - Task ':registerPublicationInCAS' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+:registerPublicationInCAS
+[WARN] - No URLs will be polled as dynamic configuration sources.
+[INFO] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@6b146b6
+[INFO] - Flipping property: rbac-2046372760.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+[INFO] - Client: rbac-2046372760 instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=rbac-2046372760,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+[INFO] - Using serverListUpdater PollingServerListUpdater
+[INFO] - Flipping property: rbac-2046372760.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+[INFO] - DynamicServerListLoadBalancer for client rbac-2046372760 initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=rbac-2046372760,current list of Servers=[rbac-pro1.cern.ch:8443, rbac-pro2.cern.ch:8443, rbac-pro3.cern.ch:8443],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:3;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:rbac-pro1.cern.ch:8443;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 01:00:00 CET 1970;	First connection made: Thu Jan 01 01:00:00 CET 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+, [Server:rbac-pro2.cern.ch:8443;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 01:00:00 CET 1970;	First connection made: Thu Jan 01 01:00:00 CET 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+, [Server:rbac-pro3.cern.ch:8443;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 01:00:00 CET 1970;	First connection made: Thu Jan 01 01:00:00 CET 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.netflix.loadbalancer.ConfigurationBasedServerList@2bfd20e8
+[INFO] - Client: rbac-2046372760 instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=rbac-2046372760,current list of Servers=[rbac-pro1.cern.ch:8443, rbac-pro2.cern.ch:8443, rbac-pro3.cern.ch:8443],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:3;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:rbac-pro1.cern.ch:8443;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 01:00:00 CET 1970;	First connection made: Thu Jan 01 01:00:00 CET 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+, [Server:rbac-pro2.cern.ch:8443;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 01:00:00 CET 1970;	First connection made: Thu Jan 01 01:00:00 CET 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+, [Server:rbac-pro3.cern.ch:8443;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 01:00:00 CET 1970;	First connection made: Thu Jan 01 01:00:00 CET 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.netflix.loadbalancer.ConfigurationBasedServerList@2bfd20e8
+[INFO] - rbac.env = "PRO"
+[INFO] - rbac.client.serverList = "https://rbac-pro1.cern.ch:8443/rba/,https://rbac-pro2.cern.ch:8443/rba/,https://rbac-pro3.cern.ch:8443/rba/"
+[INFO] - RBAC: Attempting SSO login ...
+[INFO] - Registering cern.accsoft.commons.util.proc.ProcUtils$PU
+[INFO] - System propoperty 'app.version' not specified
+[INFO] - System property 'app.name' not specified
+[INFO] - No master or renewable token found
+[INFO] - RBAC: Attempting ping login ...
+[INFO] - Connected to remote RBAC server 'https://rbac-pro3.cern.ch:8443/rba/api/v1/authenticate/location'
+[INFO] - RBAC: Ping login succeeded
+[INFO] - RBAC: Attempting SSO login ...
+[INFO] - Obtained APPLICATION token for username 'mbuttner': #0x41bea102
+[INFO] - New RbaToken is set!
+[INFO] - rbac.env = "PRO"
+[INFO] - rbac.client.serverList = "https://rbac-pro1.cern.ch:8443/rba/,https://rbac-pro2.cern.ch:8443/rba/,https://rbac-pro3.cern.ch:8443/rba/"
+[INFO] - RBAC: Attempting SSO login ...
+[INFO] - No master or renewable token found
+[INFO] - RBAC: Attempting ping login ...
+[INFO] - Connected to remote RBAC server 'https://rbac-pro1.cern.ch:8443/rba/api/v1/authenticate/location'
+[INFO] - RBAC: Ping login succeeded
+[INFO] - RBAC: Attempting SSO login ...
+[INFO] - Obtained APPLICATION token for username 'mbuttner': #0x47d0286b
+[INFO] - New RbaToken is set!
+[LIFECYCLE] - Registered publication cern.c2mon.client:c2mon-client-ext-history:2.0.1-20220913-151846 successfully in CAS (https://cas.cern.ch)
+[INFO] - :registerPublicationInCAS (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.831 secs.
+[INFO] - :attachDependencyProperties (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Caching disabled for task ':attachDependencyProperties' because:
+  Build cache is disabled
+[INFO] - Task ':attachDependencyProperties' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+:attachDependencyProperties
+[INFO] - :attachDependencyProperties (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.0 secs.
+[INFO] - :postUploadDevToOperation (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Skipping task ':postUploadDevToOperation' as task onlyIf is false.
+:postUploadDevToOperation SKIPPED
+[INFO] - :postUploadDevToOperation (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.0 secs.
+[INFO] - :devrelease (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Caching disabled for task ':devrelease' because:
+  Build cache is disabled
+[INFO] - Task ':devrelease' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+:devrelease
+[INFO] - :devrelease (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.002 secs.
+[INFO] - :afterPublish (Thread[Execution worker for ':' Thread 2,5,main]) started.
+[INFO] - Caching disabled for task ':afterPublish' because:
+  Build cache is disabled
+[INFO] - Task ':afterPublish' is not up-to-date because:
+  Task has not declared any outputs despite executing actions.
+:afterPublish
+[QUIET] - Publishing has finished for root project 'c2mon-client-ext-history'
+[INFO] - :afterPublish (Thread[Execution worker for ':' Thread 2,5,main]) completed. Took 0.0 secs.
+
+
+---------------------------------------------------------
+Summary of warnings and errors
+---------------------------------------------------------
+
+ - [WARN] - Test execution is disabled for this project. To turn it back, remove the junit.enabled=false property
+ - [WARN] - No URLs will be polled as dynamic configuration sources.
+
+
+---------------------------------------------------------
+Hints for c2mon-client-ext-history
+---------------------------------------------------------
+
+:devrelease
+
+ - Artifacts for c2mon-client-ext-history: http://artifactory.cern.ch/webapp/#/artifacts/browse/tree/General/beco-development-local/cern/c2mon/client/c2mon-client-ext-history/2.0.1-20220913-151846
+
+---------------------------------------------------------
+
+
+BUILD SUCCESSFUL
+
