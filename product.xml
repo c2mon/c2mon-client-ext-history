@@ -1,5 +1,5 @@
 <products>
-    <product name="c2mon-client-ext-history" directory="c2mon/c2mon-client/c2mon-client-ext-history" version="2.0.0">
+    <product name="c2mon-client-ext-history" directory="c2mon/client/c2mon-client-ext-history" version="2.0.0">
         <dependencies>
             <!-- C2MON dependencies -->
             <dep groupId="cern.c2mon.client" product="c2mon-client-core" version="CTX"/>
@@ -10,19 +10,22 @@
             <dep groupId="org.mybatis" product="mybatis-spring" version="2.0.6"/>
 
             <!-- 3rd party dependencies -->
-            <dep groupId="org.hsqldb" product="hsqldb"/>
-            <dep groupId="org.springframework" product="spring-context"/>
-            <dep groupId="org.springframework.boot" product="spring-boot-starter-data-jpa"/>
-            <dep groupId="org.springframework.boot" product="spring-boot-configuration-processor"/>
+            <dep groupId="org.hsqldb" product="hsqldb" version="2.3.4"/>
+            <dep groupId="org.springframework" product="spring-context" version="5.1.2.RELEASE"/>
+            <dep groupId="org.springframework.boot" product="spring-boot" version="2.1.1.RELEASE"/>
+            <dep groupId="org.springframework.boot" product="spring-boot-starter" version="2.1.1.RELEASE"/>
+            <dep groupId="org.springframework.boot" product="spring-boot-starter-logging" version="2.1.1.RELEASE"/>
+            <dep groupId="org.springframework.boot" product="spring-boot-starter-data-jpa" version="2.1.1.RELEASE"/>
+            <dep groupId="org.springframework.boot" product="spring-boot-configuration-processor" version="2.1.1.RELEASE"/>
             <dep groupId="commons-dbcp" product="commons-dbcp"/>
-            <dep groupId="org.mybatis" product="mybatis"/>
+            <dep groupId="org.mybatis" product="mybatis" version="3.5.6"/>
             <dep groupId="org.projectlombok" product="lombok"/>
             <dep groupId="xml-apis" product="xml-apis"/>
 
             <!-- Test dependencies -->
             <dep groupId="junit" product="junit" scope="test"/>
-            <dep groupId="org.springframework.boot" product="spring-boot-starter-test" scope="test"/>
-            <dep groupId="org.easymock" product="easymock"/>
+            <dep groupId="org.springframework.boot" product="spring-boot-starter-test" version="2.1.1.RELEASE" scope="test"/>
+            <dep groupId="org.easymock" product="easymock" version="3.4" scope="test"/>
 
         </dependencies>
     </product>
