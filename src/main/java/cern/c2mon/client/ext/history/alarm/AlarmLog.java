@@ -37,7 +37,7 @@ import cern.c2mon.client.ext.history.alarm.config.JpaConfiguration;
 @Entity
 @Data
 @Table(name = "alarmlog")
-public class Alarm {
+public class AlarmLog {
 
   /**
    * The local alarm timestamp. In the database it is stored as UTC timestamp.
@@ -67,6 +67,9 @@ public class Alarm {
 
   @Type(type="yes_no")
   private boolean active;
+
+  @Type(type="yes_no")
+  private Boolean oscillating;
 
   private String info;
 }

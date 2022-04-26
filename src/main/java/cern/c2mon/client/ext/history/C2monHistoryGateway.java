@@ -16,7 +16,7 @@
  *****************************************************************************/
 package cern.c2mon.client.ext.history;
 
-import cern.c2mon.client.ext.history.alarm.AlarmHistoryService;
+import cern.c2mon.client.ext.history.alarm.repo.AlarmHistoryService;
 import cern.c2mon.client.ext.history.command.CommandRecordService;
 import org.springframework.context.ApplicationContext;
 
