@@ -3,8 +3,12 @@ package cern.c2mon.client.ext.history.supervision;
 
 import lombok.Data;
 
-import javax.persistence.*;
-import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Index;
+import javax.persistence.Table;
+import java.time.LocalDateTime;
 
 /**
  * @author Manuel Bouzas Reguera
@@ -14,7 +18,6 @@ import java.util.Date;
 @Data
 public class ServerSupervisionEvent {
 
-    @Id
     @Column(name = "SUL_ID")
     private Long id;
 
@@ -22,9 +25,9 @@ public class ServerSupervisionEvent {
     @Column(name = "SUL_ENTITY")
     private String sul_entity;
 
-
+    @Id
     @Column(name = "SUL_DATE")
-    private Date eventTime;
+    private LocalDateTime eventTime;
 
 
     @Column(name = "SUL_STATUS")
