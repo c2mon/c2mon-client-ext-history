@@ -14,6 +14,30 @@ import org.springframework.stereotype.Service;
 @Service
 public interface LaserAlarmEventRepoService extends JpaRepository<LaserAlarmLogUserConfig, Long> {
 
+
+    @Query("select lagc from LaserAlarmLogUserConfig lagc " +
+            "where lagc.configId = :configId " +
+            "and lagc.serverTime between to_timestamp(:startTime, 'YYYY-MM-DD-HH24:MI') and to_timestamp(:endTime, 'YYYY-MM-DD-HH24:MI') " +
+            "and (lagc.faultFamily like %:text% or " +
+            "lagc.faultMember like %:text% or " +
+            "lagc.faultCode like %:text% or " +
+            "lagc.problemDescription like %:text%) " +
+            "and lagc.priority in :priorities " +
+            "order by lagc.serverTime asc")
+    List<LaserAlarmLogUserConfig> findAllAlarmsByConfigIdAndPriorityAndTextBetweenDates(
+            @Param("configId") Long configId, @Param("startTime") String startTime,
+            @Param("endTime") String endTime, @Param("text") String text, @Param("priorities") List<Integer> priorities);
+
+
+    @Query("select lagc from LaserAlarmLogUserConfig lagc " +
+            "where lagc.configId = :configId " +
+            "and lagc.serverTime between to_timestamp(:startTime, 'YYYY-MM-DD-HH24:MI') and to_timestamp(:endTime, 'YYYY-MM-DD-HH24:MI') " +
+            "and lagc.priority in :priorities " +
+            "order by lagc.serverTime asc")
+    List<LaserAlarmLogUserConfig> findAllAlarmsByConfigIdAndPriorityBetweenDates(
+            @Param("configId") Long configId, @Param("startTime") String startTime,
+            @Param("endTime") String endTime, @Param("priorities") List<Integer> priorities);
+
     /**
      * Fetch active alarms state at given time
      * Filter by configId, text search and priority

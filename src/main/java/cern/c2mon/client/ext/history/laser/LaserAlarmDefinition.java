@@ -15,8 +15,8 @@ import org.springframework.context.annotation.Profile;
 @Profile("enableLaser")
 @Entity
 @Data
-@Table(name = "lsr_alarm_user_config_v")
-public class LaserAlarmUserConfig {
+@Table(name = "lsr_alarm_definition_v")
+public class LaserAlarmDefinition {
 
     @Id
     @Column(name = "alarm_id")
