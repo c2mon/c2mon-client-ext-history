@@ -3,6 +3,7 @@
 build/
 target/
 temp.json
+*.log
 
 # IDE files
 *.iml
@@ -10,6 +11,7 @@ temp.json
 .settings/
 .classpath
 .project
+.gradle/
 
 # Package Files
 *.jar
@@ -23,3 +25,4 @@ hs_err_pid*
 .DS_Store
 
 activemq-data/
+/bin/
