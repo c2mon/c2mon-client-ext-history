@@ -30,8 +30,34 @@ import org.springframework.context.annotation.Profile;
 @Profile("enableLaser")
 @Entity
 @Data
-@Table(name = "shorttermlog")
+@Table(name = "c2mon_alarm_shorttermlog_v")
+
+/*-
+ * create view c2mon_alarm_shorttermlog_v as
+select
+    LOGDATE, 
+    TAGID    ,     
+    TAGNAME   ,  
+    TAGVALUE   , 
+    TAGVALUEDESC, 
+    TAGDATATYPE  ,  
+    TAGTIME       ,   
+    TAGSERVERTIME ,   
+    TAGDAQTIME     ,   
+    TAGSTATUS       ,     
+    TAGSTATUSDESC    , 
+    TAGMODE,     
+    TAGDIR,
+    a.alarmmetadata
+from 
+    shorttermlog st,
+    alarm a
+where
+    st.tagid = a.alarm_tagid;
+
+ */
 public class Shorttermlog {
+    
 
   @Id
   @Column(name = "tagservertime")
@@ -57,4 +83,7 @@ public class Shorttermlog {
 
   @Column(name ="tagdaqtime")
   private LocalDateTime tagDaqTime;
+
+  @Column(name ="alarmmetadata")
+  private String alarmMetaData;
 }
