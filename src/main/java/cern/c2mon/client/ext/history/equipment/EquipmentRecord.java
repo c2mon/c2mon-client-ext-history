@@ -25,11 +25,11 @@ public class EquipmentRecord {
     @Column(name = "eq_procid")
     private Long processId;
 
-    /*@Column(name = "eqaddress")
-    private String address;
-
     @Column(name = "eqstate_tagid")
     private Integer stateTagId;
+
+    /*@Column(name = "eqaddress")
+    private String address;
 
     @Column(name = "eqalive_tagid")
     private Long aliveTagId;

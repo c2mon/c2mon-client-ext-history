@@ -20,4 +20,6 @@ public class Process {
     @Column(name = "procname")
     private String name;
 
+    @Column(name = "procstate_tagid")
+    private Integer stateTagId;
 }
