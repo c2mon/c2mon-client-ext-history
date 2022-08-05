@@ -2,6 +2,7 @@ package cern.c2mon.client.ext.history.laser.repo;
 
 import cern.c2mon.client.ext.history.laser.Shorttermlog;
 
+import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -50,5 +51,6 @@ public interface ShorttermlogHistoryService extends JpaRepository<Shorttermlog, 
     Page<Shorttermlog> findAllDistinctByIdOrderByTagServerTimeDesc(
             @Param("id") Long id,
             Pageable pageable);
+
 
 }

@@ -18,7 +18,6 @@ package cern.c2mon.client.ext.history.data.repo;
 
 import cern.c2mon.client.ext.history.data.DataTagRecord;
 import org.springframework.data.jpa.repository.JpaRepository;
-
 import java.util.List;
 import java.util.Optional;
 
