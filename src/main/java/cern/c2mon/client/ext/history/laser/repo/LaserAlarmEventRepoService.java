@@ -3,6 +3,7 @@ package cern.c2mon.client.ext.history.laser.repo;
 import cern.c2mon.client.ext.history.laser.LaserAlarmLogUserConfig;
 
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.data.domain.Page;
@@ -69,20 +70,18 @@ public interface LaserAlarmEventRepoService extends JpaRepository<LaserAlarmLogU
      * Fetch active alarms state at given time
      * Filter by configId, text search and priority
      */
-    @Query("select lagc from LaserAlarmLogUserConfig lagc " +
+    @Query("select lagc " +
+            "from LaserAlarmLogUserConfig lagc " +
             "where lagc.serverTime = (" +
             "select max(lagc2.serverTime) from LaserAlarmLogUserConfig lagc2 " +
             "where lagc2.serverTime < to_timestamp(:time, 'YYYY-MM-DD-HH24:MI') " +
-            "and lagc2.configId = :configId " +
-            "and lagc2.priority in :priorities " +
-            "and (lagc.faultFamily like %:text% or " +
-            "lagc.faultMember like %:text% or " +
-            "lagc.faultCode like %:text% or " +
-            "lagc.problemDescription like %:text%) " +
             "and lagc.id = lagc2.id) " +
             "and lagc.active='Y' " +
+            "and lagc.configId = :configId " +
+            "and lagc.priority in :priorities " +
+            "and (lagc.faultFamily like %:text% or lagc.faultMember like %:text% or lagc.faultCode like %:text% or lagc.problemDescription like %:text%) " +
             "order by lagc.serverTime asc")
-    List<LaserAlarmLogUserConfig> findAllActiveAlarmsByConfigIdAndPriorityAndTextAtGivenTime(
+    Set<LaserAlarmLogUserConfig> findAllActiveAlarmsByConfigIdAndPriorityAndTextAtGivenTime(
             @Param("configId") Long configId, @Param("time") String time, @Param("text") String text,
             @Param("priorities") List<Integer> priorities);
 
@@ -90,7 +89,8 @@ public interface LaserAlarmEventRepoService extends JpaRepository<LaserAlarmLogU
      * Fetch active alarms state at given time
      * Filter by configId and priority
      */
-    @Query("select lagc from LaserAlarmLogUserConfig lagc " +
+    @Query("select lagc " +
+            "from LaserAlarmLogUserConfig lagc " +
             "where lagc.serverTime = (" +
             "select max(lagc2.serverTime) from LaserAlarmLogUserConfig lagc2 " +
             "where lagc2.serverTime < to_timestamp(:time, 'YYYY-MM-DD-HH24:MI') " +
@@ -99,44 +99,7 @@ public interface LaserAlarmEventRepoService extends JpaRepository<LaserAlarmLogU
             "and lagc.id = lagc2.id) " +
             "and lagc.active='Y' " +
             "order by lagc.serverTime asc")
-    List<LaserAlarmLogUserConfig> findAllActiveAlarmsByConfigIdAndPriorityAtGivenTime(
+    Set<LaserAlarmLogUserConfig> findAllActiveAlarmsByConfigIdAndPriorityAtGivenTime(
             @Param("configId") Long configId, @Param("time") String time, @Param("priorities") List<Integer> priorities);
 
-    /**
-     * Fetch active alarms state at given time
-     * Filter by configId, text search and priority
-     */
-    @Query("select lagc from LaserAlarmLogUserConfig lagc " +
-            "where lagc.serverTime = (" +
-            "select max(lagc2.serverTime) from LaserAlarmLogUserConfig lagc2 " +
-            "where lagc2.serverTime < to_timestamp(:time, 'YYYY-MM-DD-HH24:MI') " +
-            "and lagc2.configId = :configId " +
-            "and lagc2.priority in :priorities " +
-            "and (lagc.faultFamily like %:text% or " +
-            "lagc.faultMember like %:text% or " +
-            "lagc.faultCode like %:text% or " +
-            "lagc.problemDescription like %:text%) " +
-            "and lagc.id = lagc2.id) " +
-            "and lagc.active='Y' " +
-            "order by lagc.serverTime asc")
-    Page<LaserAlarmLogUserConfig> findAllActiveAlarmsByConfigIdAndPriorityAndTextAtGivenTime(
-            @Param("configId") Long configId, @Param("time") String time, @Param("text") String text,
-            @Param("priorities") List<Integer> priorities, Pageable pageable);
-
-    /**
-     * Fetch active alarms state at given time
-     * Filter by configId and priority
-     */
-    @Query("select lagc from LaserAlarmLogUserConfig lagc " +
-            "where lagc.serverTime = (" +
-            "select max(lagc2.serverTime) from LaserAlarmLogUserConfig lagc2 " +
-            "where lagc2.serverTime < to_timestamp(:time, 'YYYY-MM-DD-HH24:MI') " +
-            "and lagc2.configId = :configId " +
-            "and lagc2.priority in :priorities " +
-            "and lagc.id = lagc2.id) " +
-            "and lagc.active='Y' " +
-            "order by lagc.serverTime asc")
-    Page<LaserAlarmLogUserConfig> findAllActiveAlarmsByConfigIdAndPriorityAtGivenTime(
-            @Param("configId") Long configId, @Param("time") String time, @Param("priorities") List<Integer> priorities,
-            Pageable pageable);
 }

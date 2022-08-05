@@ -56,7 +56,7 @@ where
     st.tagid = a.alarm_tagid;
 
  */
-public class Shorttermlog {
+public class AlarmShorttermlog {
     
 
   @Id
