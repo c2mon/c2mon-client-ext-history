@@ -1,6 +1,6 @@
 package cern.c2mon.client.ext.history.laser.repo;
 
-import cern.c2mon.client.ext.history.laser.Shorttermlog;
+import cern.c2mon.client.ext.history.laser.AlarmShorttermlog;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -15,39 +15,39 @@ import org.springframework.stereotype.Service;
 
 @Profile("enableLaser")
 @Service
-public interface ShorttermlogHistoryService extends JpaRepository<Shorttermlog, Long>{
+public interface AlarmShorttermlogHistoryService extends JpaRepository<AlarmShorttermlog, Long>{
 
-    @Query("SELECT DISTINCT a FROM Shorttermlog a WHERE "
+    @Query("SELECT DISTINCT a FROM AlarmShorttermlog a WHERE "
             + "a.id = :id AND "
             + "a.tagServerTime BETWEEN :startTime AND :endTime "
             + "ORDER BY a.tagServerTime DESC")
-    Page<Shorttermlog> findAllDistinctByIdAndTagServerTimeBetweenOrderByTagServerTimeDesc(
+    Page<AlarmShorttermlog> findAllDistinctByIdAndTagServerTimeBetweenOrderByTagServerTimeDesc(
             @Param("id") Long id,
             @Param("startTime") LocalDateTime startTime,
             @Param("endTime") LocalDateTime endTime,
             Pageable pageable);
 
-    @Query("SELECT DISTINCT a FROM Shorttermlog a WHERE "
+    @Query("SELECT DISTINCT a FROM AlarmShorttermlog a WHERE "
             + "a.id = :id AND "
             + "a.tagServerTime BETWEEN :startTime AND :endTime "
             + "ORDER BY a.tagServerTime DESC")
-    List<Shorttermlog> findAllDistinctByIdAndTagServerTimeBetweenOrderByTagServerTimeDesc(
+    List<AlarmShorttermlog> findAllDistinctByIdAndTagServerTimeBetweenOrderByTagServerTimeDesc(
             @Param("id") Long id,
             @Param("startTime") LocalDateTime startTime,
             @Param("endTime") LocalDateTime endTime);
 
-    @Query("SELECT DISTINCT a FROM Shorttermlog a WHERE "
+    @Query("SELECT DISTINCT a FROM AlarmShorttermlog a WHERE "
             + "a.tagServerTime BETWEEN :startTime AND :endTime "
             + "ORDER BY a.tagServerTime DESC")
-    Page<Shorttermlog> findAllDistinctByTagServerTimeBetweenOrderByTagServerTimeDesc(
+    Page<AlarmShorttermlog> findAllDistinctByTagServerTimeBetweenOrderByTagServerTimeDesc(
             @Param("startTime") LocalDateTime startTime,
             @Param("endTime") LocalDateTime endTime,
             Pageable pageable);
 
-    @Query("SELECT DISTINCT a FROM Shorttermlog a WHERE "
+    @Query("SELECT DISTINCT a FROM AlarmShorttermlog a WHERE "
             + "a.id = :id "
             + "ORDER BY a.tagServerTime DESC")
-    Page<Shorttermlog> findAllDistinctByIdOrderByTagServerTimeDesc(
+    Page<AlarmShorttermlog> findAllDistinctByIdOrderByTagServerTimeDesc(
             @Param("id") Long id,
             Pageable pageable);
 
