@@ -23,11 +23,23 @@ public class ShortTermLog {
   @Column(name = "tagid")
   private Long id;
 
+  @Column(name = "tagdatatype")
+  private Class tagDatatype;
+
   @Column(name ="tagtime")
   private LocalDateTime tagTime;
 
   @Column(name ="tagdaqtime")
   private LocalDateTime tagDaqTime;
+
+  @Column(name = "tagstatusdesc")
+  private String tagStatusDesc;
+
+  @Column(name = "tagname")
+  private String tagName;
+
+  @Column(name = "tagvaluedesc")
+  private String tagValueDesc;
 
   @Column(name = "tagvalue")
   private String tagValue;
