@@ -20,5 +20,6 @@ public interface LaserUserConfigRepoService extends JpaRepository<LaserUserConfi
 
     Optional<LaserUserConfig> findByConfigName(String configName);
 
-    List<LaserUserConfig> findAll();
+    @Query("select luc from LaserUserConfig luc order by upper(luc.configName)")
+    List<LaserUserConfig> findAllByOrderByConfigName();
 }
