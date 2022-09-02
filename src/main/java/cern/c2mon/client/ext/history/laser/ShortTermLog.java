@@ -24,7 +24,7 @@ public class ShortTermLog {
   private Long id;
 
   @Column(name = "tagdatatype")
-  private Class tagDatatype;
+  private Class<?> tagDatatype;
 
   @Column(name ="tagtime")
   private LocalDateTime tagTime;
