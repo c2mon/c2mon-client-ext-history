@@ -42,10 +42,10 @@ public class DataTagData {
 
   @Id
   @Column(name = "tagId")
-  private int tagId;        //  INTEGER NOT NULL PRIMARY KEY,
+  private Long tagId;        //  INTEGER NOT NULL PRIMARY KEY,
 
   @Column(name = "tagmode")
-  private int tagMode;//TAGMODE             INTEGER NOT NULL,
+  private Integer tagMode;//TAGMODE             INTEGER NOT NULL,
 
   @Column(name = "tagunit")
   private String tagUnit;//TAGUNIT             VARCHAR(50),
