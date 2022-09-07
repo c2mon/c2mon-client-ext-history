@@ -1,4 +1,4 @@
-package cern.c2mon.client.ext.history.laser;
+package cern.c2mon.client.ext.history.es_publisher;
 
 import java.time.LocalDateTime;
 

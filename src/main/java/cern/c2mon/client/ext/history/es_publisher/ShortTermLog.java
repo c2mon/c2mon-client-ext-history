@@ -1,4 +1,4 @@
-package cern.c2mon.client.ext.history.laser;
+package cern.c2mon.client.ext.history.es_publisher;
 
 import java.time.LocalDateTime;
 
@@ -11,7 +11,6 @@ import org.springframework.context.annotation.Profile;
 
 import lombok.Data;
 
-@Profile("enableLaser")
 @Entity
 @Data
 @Table(name = "shorttermlog")
