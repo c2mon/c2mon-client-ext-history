@@ -1,21 +1,20 @@
-package cern.c2mon.client.ext.history.laser;
+package cern.c2mon.client.ext.history.es_publisher;
 
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Map;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import org.springframework.context.annotation.Profile;
-
 import lombok.Data;
 
-@Profile("enableLaser")
 @Entity
 @Data
 @Table(name = "datatag")
@@ -51,7 +50,8 @@ public class DataTagData {
   private String tagUnit;//TAGUNIT             VARCHAR(50),
 
   @Column(name = "tagmetadata")
-  private String tagMetaData;//TAGMETADATA         VARCHAR(4000),
+  @Convert(converter = MapToStringConverter.class)
+  private Map<String, String> tagMetaData;//TAGMETADATA         VARCHAR(4000),
 
   @Column(name = "tagdatatype")
   private String tagDataType;//TAGDATATYPE         VARCHAR(200) NOT NULL,

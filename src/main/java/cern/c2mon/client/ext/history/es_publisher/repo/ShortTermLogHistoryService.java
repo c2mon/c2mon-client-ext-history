@@ -1,4 +1,4 @@
-package cern.c2mon.client.ext.history.laser.repo;
+package cern.c2mon.client.ext.history.es_publisher.repo;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import cern.c2mon.client.ext.history.laser.ShortTermLog;
+import cern.c2mon.client.ext.history.es_publisher.ShortTermLog;
 
 public interface ShortTermLogHistoryService extends JpaRepository<ShortTermLog, Long> {
 
