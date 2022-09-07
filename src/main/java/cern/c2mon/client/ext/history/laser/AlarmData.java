@@ -7,11 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.springframework.context.annotation.Profile;
-
 import lombok.Data;
 
-@Profile("enableLaser")
 @Entity
 @Data
 @Table(name = "alarm")
@@ -38,7 +35,7 @@ public class AlarmData {
 
   @Id
   @Column(name = "ALARMID")
-  private int alarmId;        //  INTEGER NOT NULL PRIMARY KEY,
+  private Long alarmId;        //  INTEGER NOT NULL PRIMARY KEY,
 
   @Column(name = "ALARM_TAGID")
   private Integer alarmTagId;
