@@ -68,6 +68,9 @@ public class DataTagData {
   @Column(name = "tagdesc")
   private String tagDesc;//TAGDESC             VARCHAR(100),
 
+  @Column(name = "tagsrvtimestamp")
+  private LocalDateTime tagServerTimestamp;
+
   @Column(name = "tagtimestamp")
   private LocalDateTime tagTimeStamp;//TAGTIMESTAMP        TIMESTAMP(6),
 
