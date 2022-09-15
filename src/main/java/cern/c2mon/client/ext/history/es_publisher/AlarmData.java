@@ -1,6 +1,9 @@
 package cern.c2mon.client.ext.history.es_publisher;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -56,10 +59,10 @@ public class AlarmData {
   private String alarmState;//      VARCHAR(10),
 
   @Column(name = "ALARMTIME")
-  private LocalDateTime alarmTime;//        TIMESTAMP(6),
+  private Instant alarmTime;//        TIMESTAMP(6),
 
   @Column(name = "ALARMSOURCETIME")
-  private LocalDateTime alarmSourceTime;// TIMESTAMP(6),
+  private Instant alarmSourceTime;// TIMESTAMP(6),
 
   @Column(name = "ALARMINFO")
   private String alarmInfo; //ALARMINFO        VARCHAR(100),
