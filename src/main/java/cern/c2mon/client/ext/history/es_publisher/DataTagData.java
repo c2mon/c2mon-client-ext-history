@@ -1,6 +1,6 @@
 package cern.c2mon.client.ext.history.es_publisher;
 
-import java.time.LocalDateTime;
+import java.time.Instant;
 import java.util.List;
 import java.util.Map;
 
@@ -69,10 +69,10 @@ public class DataTagData {
   private String tagDesc;//TAGDESC             VARCHAR(100),
 
   @Column(name = "tagsrvtimestamp")
-  private LocalDateTime tagServerTimestamp;
+  private Instant tagServerTimestamp;
 
   @Column(name = "tagtimestamp")
-  private LocalDateTime tagTimeStamp;//TAGTIMESTAMP        TIMESTAMP(6),
+  private Instant tagTimeStamp;//TAGTIMESTAMP        TIMESTAMP(6),
 
   @OneToMany(mappedBy = "alarmTagId", cascade = CascadeType.ALL, fetch= FetchType.EAGER)
   //@JoinColumn(name = "ALARM_TAGID")
