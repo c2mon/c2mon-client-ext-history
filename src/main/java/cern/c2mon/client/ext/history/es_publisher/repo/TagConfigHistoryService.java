@@ -1,6 +1,9 @@
 package cern.c2mon.client.ext.history.es_publisher.repo;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
+import java.util.List;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -12,16 +15,15 @@ import cern.c2mon.client.ext.history.es_publisher.DataTagData;
 
 public interface TagConfigHistoryService extends JpaRepository<DataTagData, Long>{
 
-    Page<DataTagData> findAllBetweenByOrderByTagTimeStampDesc(
-            @Param("startTime") LocalDateTime startTime,
-            @Param("endTime") LocalDateTime endTime,
-            Pageable pageable);
-
     @Query("SELECT a FROM DataTagData a WHERE "
-            + "a.tagTimeStamp > :startTime "
-            + "ORDER BY a.tagTimeStamp ASC")
-    Page<DataTagData> findAllAfterByOrderByTagTimeStampAsc(
+            + "a.tagServerTimestamp BETWEEN :startTime AND :endTime "
+            + "ORDER BY a.tagServerTimestamp ASC")
+    List<DataTagData> findByTagServerTimestampBetweenByOrderByTagTimeStampDesc(
             @Param("startTime") LocalDateTime startTime,
+            @Param("endTime") LocalDateTime endTime);
+
+    Page<DataTagData> findAllAfterByOrderByTagTimeStampAsc(
+            @Param("startTime") Instant startTime,
             Pageable pageable);
 
     Page<DataTagData> findAllByOrderByTagTimeStampDesc(Pageable pageable);
