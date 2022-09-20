@@ -59,10 +59,10 @@ public class AlarmData {
   private String alarmState;//      VARCHAR(10),
 
   @Column(name = "ALARMTIME")
-  private Instant alarmTime;//        TIMESTAMP(6),
+  private ZonedDateTime alarmTime;//        TIMESTAMP(6),
 
   @Column(name = "ALARMSOURCETIME")
-  private Instant alarmSourceTime;// TIMESTAMP(6),
+  private ZonedDateTime alarmSourceTime;// TIMESTAMP(6),
 
   @Column(name = "ALARMINFO")
   private String alarmInfo; //ALARMINFO        VARCHAR(100),

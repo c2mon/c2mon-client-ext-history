@@ -1,6 +1,8 @@
 package cern.c2mon.client.ext.history.es_publisher;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Map;
 
@@ -43,36 +45,63 @@ public class DataTagData {
   @Column(name = "tagId")
   private Long tagId;        //  INTEGER NOT NULL PRIMARY KEY,
 
-  @Column(name = "tagmode")
-  private Integer tagMode;//TAGMODE             INTEGER NOT NULL,
-
-  @Column(name = "tagunit")
-  private String tagUnit;//TAGUNIT             VARCHAR(50),
-
-  @Column(name = "tagmetadata")
-  @Convert(converter = MapToStringConverter.class)
-  private Map<String, String> tagMetaData;//TAGMETADATA         VARCHAR(4000),
-
-  @Column(name = "tagdatatype")
-  private String tagDataType;//TAGDATATYPE         VARCHAR(200) NOT NULL,
-
-  @Column(name = "tag_eqid")
-  private Integer tagEqId;//TAG_EQID            INTEGER,
-
-  @Column(name = "taglogged")
-  private Integer tagLogged;//TAGLOGGED           INTEGER,
-
   @Column(name = "tagname")
   private String tagName;//TAGNAME             VARCHAR(255) NOT NULL UNIQUE,
 
   @Column(name = "tagdesc")
   private String tagDesc;//TAGDESC             VARCHAR(100),
 
-  @Column(name = "tagsrvtimestamp")
-  private Instant tagServerTimestamp;
+  @Column(name = "tagmode")
+  private Integer tagMode;//TAGMODE             INTEGER NOT NULL,
+
+  @Column(name = "tagdatatype")
+  private String tagDataType;//TAGDATATYPE         VARCHAR(200) NOT NULL,
+
+  @Column(name = "tagcontroltag")
+  private Boolean tagControlTag;
+
+  @Column(name = "tagvalue")
+  private String tagValue;
+
+  @Column(name = "tagvaluedesc")
+  private String tagValueDesc;
 
   @Column(name = "tagtimestamp")
-  private Instant tagTimeStamp;//TAGTIMESTAMP        TIMESTAMP(6),
+  private LocalDateTime tagTimeStamp;//TAGTIMESTAMP        TIMESTAMP(6),
+
+  @Column(name = "tagdaqtimestamp")
+  private LocalDateTime tagDaqTimestamp;
+
+  @Column(name = "tagsrvtimestamp")
+  private LocalDateTime tagServerTimestamp;
+
+  @Column(name = "tagmetadata")
+  @Convert(converter = MapToStringConverter.class)
+  private Map<String, String> tagMetaData;//TAGMETADATA         VARCHAR(4000),
+
+  @Column(name = "tagqualitycode")
+  private Integer tagQualityCode;
+
+  @Column(name = "tagQualityDesc")
+  private String tagQualityDesc;
+
+  @Column(name = "tagrule")
+  private String tagRule;
+
+  @Column(name = "tagruleids")
+  private String tagRuleIds;
+
+  @Column(name = "tag_eqid")
+  private Integer tagEqId;//TAG_EQID            INTEGER,
+
+  @Column(name = "tagunit")
+  private String tagUnit;//TAGUNIT             VARCHAR(50),
+
+  @Column(name = "tagSimulated")
+  private Boolean tagSimulated;
+
+  @Column(name = "taglogged")
+  private Boolean tagLogged;//TAGLOGGED           INTEGER,
 
   @OneToMany(mappedBy = "alarmTagId", cascade = CascadeType.ALL, fetch= FetchType.EAGER)
   //@JoinColumn(name = "ALARM_TAGID")

@@ -1,6 +1,8 @@
 package cern.c2mon.client.ext.history.es_publisher;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZonedDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -24,10 +26,10 @@ public class ShortTermLog {
   private Class<?> tagDatatype;
 
   @Column(name ="tagtime")
-  private LocalDateTime tagTime;
+  private ZonedDateTime tagTime;
 
   @Column(name ="tagdaqtime")
-  private LocalDateTime tagDaqTime;
+  private ZonedDateTime tagDaqTime;
 
   @Column(name = "tagstatusdesc")
   private String tagStatusDesc;
