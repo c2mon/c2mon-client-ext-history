@@ -1,4 +1,4 @@
-package cern.c2mon.client.ext.history.es_publisher;
+package cern.c2mon.client.ext.history.es_publisher.entity;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
@@ -17,7 +17,7 @@ import lombok.Data;
 public class ShortTermLog {
   @Id
   @Column(name = "tagservertime")
-  private LocalDateTime tagServerTime;
+  private ZonedDateTime tagServerTime;
 
   @Column(name = "tagid")
   private Long id;

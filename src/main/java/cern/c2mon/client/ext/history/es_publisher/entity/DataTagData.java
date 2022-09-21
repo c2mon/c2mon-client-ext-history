@@ -1,6 +1,5 @@
-package cern.c2mon.client.ext.history.es_publisher;
+package cern.c2mon.client.ext.history.es_publisher.entity;
 
-import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.util.List;
@@ -12,9 +11,14 @@ import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import cern.c2mon.client.ext.history.es_publisher.entity.sub.AlarmData;
+import cern.c2mon.client.ext.history.es_publisher.entity.sub.EquipmentData;
+import cern.c2mon.client.ext.history.es_publisher.entity.sub.MapToStringConverter;
 import lombok.Data;
 
 @Entity
@@ -55,7 +59,7 @@ public class DataTagData {
   private Integer tagMode;//TAGMODE             INTEGER NOT NULL,
 
   @Column(name = "tagdatatype")
-  private String tagDataType;//TAGDATATYPE         VARCHAR(200) NOT NULL,
+  private Class<?> tagDataType;//TAGDATATYPE         VARCHAR(200) NOT NULL,
 
   @Column(name = "tagcontroltag")
   private Boolean tagControlTag;
@@ -67,13 +71,13 @@ public class DataTagData {
   private String tagValueDesc;
 
   @Column(name = "tagtimestamp")
-  private LocalDateTime tagTimeStamp;//TAGTIMESTAMP        TIMESTAMP(6),
+  private ZonedDateTime tagTimeStamp;//TAGTIMESTAMP        TIMESTAMP(6),
 
   @Column(name = "tagdaqtimestamp")
-  private LocalDateTime tagDaqTimestamp;
+  private ZonedDateTime tagDaqTimestamp;
 
   @Column(name = "tagsrvtimestamp")
-  private LocalDateTime tagServerTimestamp;
+  private ZonedDateTime tagServerTimestamp;
 
   @Column(name = "tagmetadata")
   @Convert(converter = MapToStringConverter.class)
@@ -91,9 +95,6 @@ public class DataTagData {
   @Column(name = "tagruleids")
   private String tagRuleIds;
 
-  @Column(name = "tag_eqid")
-  private Integer tagEqId;//TAG_EQID            INTEGER,
-
   @Column(name = "tagunit")
   private String tagUnit;//TAGUNIT             VARCHAR(50),
 
@@ -104,6 +105,9 @@ public class DataTagData {
   private Boolean tagLogged;//TAGLOGGED           INTEGER,
 
   @OneToMany(mappedBy = "alarmTagId", cascade = CascadeType.ALL, fetch= FetchType.EAGER)
-  //@JoinColumn(name = "ALARM_TAGID")
   private List<AlarmData> alarmList;
+
+  @OneToOne(cascade = CascadeType.ALL, fetch= FetchType.EAGER)
+  @JoinColumn(name = "tag_eqid", referencedColumnName = "eqid")
+  private EquipmentData equipment;
 }
