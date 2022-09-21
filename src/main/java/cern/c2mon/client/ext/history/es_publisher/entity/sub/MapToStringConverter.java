@@ -1,4 +1,4 @@
-package cern.c2mon.client.ext.history.es_publisher;
+package cern.c2mon.client.ext.history.es_publisher.entity.sub;
 
 import java.io.IOException;
 import java.util.HashMap;

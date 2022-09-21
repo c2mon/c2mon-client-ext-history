@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import cern.c2mon.client.ext.history.es_publisher.DataTagData;
+import cern.c2mon.client.ext.history.es_publisher.entity.DataTagData;
 
 public interface TagConfigHistoryService extends JpaRepository<DataTagData, Long>{
 
@@ -19,8 +19,8 @@ public interface TagConfigHistoryService extends JpaRepository<DataTagData, Long
             + "a.tagServerTimestamp BETWEEN :startTime AND :endTime "
             + "ORDER BY a.tagServerTimestamp ASC")
     List<DataTagData> findByTagServerTimestampBetweenByOrderByTagTimeStampDesc(
-            @Param("startTime") LocalDateTime startTime,
-            @Param("endTime") LocalDateTime endTime);
+            @Param("startTime") ZonedDateTime startTime,
+            @Param("endTime") ZonedDateTime endTime);
 
     Page<DataTagData> findAllAfterByOrderByTagTimeStampAsc(
             @Param("startTime") Instant startTime,
