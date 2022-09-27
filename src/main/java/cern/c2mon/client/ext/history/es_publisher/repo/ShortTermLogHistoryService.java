@@ -1,5 +1,6 @@
 package cern.c2mon.client.ext.history.es_publisher.repo;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.util.List;
@@ -18,9 +19,9 @@ public interface ShortTermLogHistoryService extends JpaRepository<ShortTermLog, 
   @Query("SELECT a FROM ShortTermLog a WHERE "
           + "a.tagServerTime BETWEEN :startTime AND :endTime "
           + "ORDER BY a.tagServerTime ASC")
-  Page<ShortTermLog> findAllByTagServerTimeBetweenOrderByTagServerTimeDesc(
-          @Param("startTime") ZonedDateTime from,
-          @Param("endTime") ZonedDateTime to,
+  Page<ShortTermLog> findAllByTagServerTimeBetween(
+          @Param("startTime") Instant from,
+          @Param("endTime") Instant to,
           Pageable pageable);
 
   // step one unique tags
@@ -28,6 +29,6 @@ public interface ShortTermLogHistoryService extends JpaRepository<ShortTermLog, 
   @Query("SELECT DISTINCT a.id FROM ShortTermLog a WHERE "
           + "a.tagServerTime BETWEEN :startTime AND :endTime ")
   List<Long> findDistinctIdByTagTimeBetween(
-          @Param("startTime") ZonedDateTime startTime,
-          @Param("endTime") ZonedDateTime endTime);
+          @Param("startTime") Instant startTime,
+          @Param("endTime") Instant endTime);
 }

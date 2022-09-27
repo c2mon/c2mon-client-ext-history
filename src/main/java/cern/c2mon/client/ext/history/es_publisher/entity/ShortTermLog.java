@@ -17,7 +17,7 @@ import lombok.Data;
 public class ShortTermLog {
   @Id
   @Column(name = "tagservertime")
-  private ZonedDateTime tagServerTime;
+  private Instant tagServerTime;
 
   @Column(name = "tagid")
   private Long id;
@@ -26,10 +26,10 @@ public class ShortTermLog {
   private Class<?> tagDatatype;
 
   @Column(name ="tagtime")
-  private ZonedDateTime tagTime;
+  private Instant tagTime;
 
   @Column(name ="tagdaqtime")
-  private ZonedDateTime tagDaqTime;
+  private Instant tagDaqTime;
 
   @Column(name = "tagstatusdesc")
   private String tagStatusDesc;

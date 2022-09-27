@@ -1,12 +1,19 @@
 package cern.c2mon.client.ext.history.supervision;
 
 
+import cern.c2mon.client.ext.history.equipment.EquipmentRecord;
+import cern.c2mon.client.ext.history.es_publisher.entity.sub.EquipmentData;
+import cern.c2mon.client.ext.history.process.Process;
 import lombok.Data;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.Index;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import java.time.LocalDateTime;
 
@@ -36,6 +43,4 @@ public class ServerSupervisionEvent {
 
     @Column(name = "SUL_MESSAGE")
     private String sul_message;
-
-
 }

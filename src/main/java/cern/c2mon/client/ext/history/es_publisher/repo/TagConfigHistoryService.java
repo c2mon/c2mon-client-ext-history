@@ -19,8 +19,8 @@ public interface TagConfigHistoryService extends JpaRepository<DataTagData, Long
             + "a.tagServerTimestamp BETWEEN :startTime AND :endTime "
             + "ORDER BY a.tagServerTimestamp ASC")
     List<DataTagData> findByTagServerTimestampBetweenByOrderByTagTimeStampDesc(
-            @Param("startTime") ZonedDateTime startTime,
-            @Param("endTime") ZonedDateTime endTime);
+            @Param("startTime") Instant startTime,
+            @Param("endTime") Instant endTime);
 
     Page<DataTagData> findAllAfterByOrderByTagTimeStampAsc(
             @Param("startTime") Instant startTime,

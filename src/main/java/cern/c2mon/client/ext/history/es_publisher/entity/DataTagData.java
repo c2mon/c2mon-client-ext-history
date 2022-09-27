@@ -1,5 +1,6 @@
 package cern.c2mon.client.ext.history.es_publisher.entity;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.time.ZonedDateTime;
 import java.util.List;
@@ -16,9 +17,11 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import cern.c2mon.client.ext.history.alarm.AlarmRecord;
 import cern.c2mon.client.ext.history.es_publisher.entity.sub.AlarmData;
 import cern.c2mon.client.ext.history.es_publisher.entity.sub.EquipmentData;
 import cern.c2mon.client.ext.history.es_publisher.entity.sub.MapToStringConverter;
+import cern.c2mon.client.ext.history.supervision.ServerSupervisionEvent;
 import lombok.Data;
 
 @Entity
@@ -71,13 +74,13 @@ public class DataTagData {
   private String tagValueDesc;
 
   @Column(name = "tagtimestamp")
-  private ZonedDateTime tagTimeStamp;//TAGTIMESTAMP        TIMESTAMP(6),
+  private Instant tagTimeStamp;//TAGTIMESTAMP        TIMESTAMP(6),
 
   @Column(name = "tagdaqtimestamp")
-  private ZonedDateTime tagDaqTimestamp;
+  private Instant tagDaqTimestamp;
 
   @Column(name = "tagsrvtimestamp")
-  private ZonedDateTime tagServerTimestamp;
+  private Instant tagServerTimestamp;
 
   @Column(name = "tagmetadata")
   @Convert(converter = MapToStringConverter.class)
@@ -104,10 +107,11 @@ public class DataTagData {
   @Column(name = "taglogged")
   private Boolean tagLogged;//TAGLOGGED           INTEGER,
 
-  @OneToMany(mappedBy = "alarmTagId", cascade = CascadeType.ALL, fetch= FetchType.EAGER)
-  private List<AlarmData> alarmList;
+  @OneToMany(mappedBy = "tagId", cascade = CascadeType.ALL, fetch= FetchType.EAGER)
+  private List<AlarmRecord> alarmList;
 
   @OneToOne(cascade = CascadeType.ALL, fetch= FetchType.EAGER)
   @JoinColumn(name = "tag_eqid", referencedColumnName = "eqid")
   private EquipmentData equipment;
+
 }
