@@ -1,10 +1,17 @@
 package cern.c2mon.client.ext.history.alarm.repo;
 
 import cern.c2mon.client.ext.history.alarm.AlarmRecord;
+import cern.c2mon.client.ext.history.es_publisher.entity.ShortTermLog;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
+import java.time.ZonedDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -69,6 +76,10 @@ public interface AlarmRepoService extends JpaRepository<AlarmRecord, Long> {
     List<AlarmRecord> findFirst10ByFaultFamilyContainingIgnoreCaseAndFaultMemberContainingIgnoreCaseAndFaultCode(@Param("faultFamily") String faultFamily,
                                                                                                           @Param("faultMember") String faultMember,
                                                                                                           @Param("faultCode") Integer faultCode);
+
+    List<AlarmRecord> findByInstantTimestampBetween(
+            Instant from,
+            Instant to);
 
 
     List<AlarmRecord> findByTagId(Long tagId);

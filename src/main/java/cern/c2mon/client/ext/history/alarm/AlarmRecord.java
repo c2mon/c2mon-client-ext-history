@@ -17,14 +17,19 @@
 package cern.c2mon.client.ext.history.alarm;
 
 
+import cern.c2mon.client.ext.history.es_publisher.entity.sub.MapToStringConverter;
 import lombok.Data;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import java.time.Instant;
 import java.time.LocalDateTime;
+import java.util.Map;
 
 @Entity
 @Data
@@ -37,6 +42,9 @@ public class AlarmRecord {
 
     @Column(name = "alarm_tagid")
     private Long tagId;
+
+    @Column(name = "alarmpriority")
+    private Integer alarmPriority;
 
     @Column(name = "alarmffamily")
     private String faultFamily;
@@ -57,9 +65,23 @@ public class AlarmRecord {
     @Column(name ="alarmsourcetime")
     private LocalDateTime sourceTimestamp;
 
+    @Column(name ="alarmtime", insertable = false, updatable = false)
+    private Instant instantTimestamp;
+
+    @Column(name ="alarmsourcetime", insertable = false, updatable = false)
+    private Instant instantSourceTimestamp;
+
     @Column(name = "alarminfo")
     private String info;
 
     @Column(name = "alarmmetadata")
     private String metadata;
+
+
+    @Column(name = "alarmmetadata", insertable = false, updatable = false)
+    @Convert(converter = MapToStringConverter.class)
+    private Map<String, String> metadataMap;//TAGMETADATA         VARCHAR(4000),
+
+    @Column(name = "alarmoscillation")
+    private Integer alarmOscillation;
 }
