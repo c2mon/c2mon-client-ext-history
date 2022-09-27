@@ -1,8 +1,6 @@
 package cern.c2mon.client.ext.history.supervision;
 
-
 import cern.c2mon.client.ext.history.equipment.EquipmentRecord;
-import cern.c2mon.client.ext.history.es_publisher.entity.sub.EquipmentData;
 import cern.c2mon.client.ext.history.process.Process;
 import lombok.Data;
 
@@ -13,9 +11,13 @@ import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.Index;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import java.time.LocalDateTime;
+
+import org.hibernate.annotations.NotFound;
+import org.hibernate.annotations.NotFoundAction;
 
 /**
  * @author Manuel Bouzas Reguera
@@ -43,4 +45,14 @@ public class ServerSupervisionEvent {
 
     @Column(name = "SUL_MESSAGE")
     private String sul_message;
+
+    @ManyToOne
+    @JoinColumn(name = "sul_id")
+    @NotFound(action = NotFoundAction.IGNORE)
+    private EquipmentRecord equipmentRecord;
+
+    @ManyToOne
+    @JoinColumn(name = "sul_id", insertable = false, updatable = false)
+    @NotFound(action = NotFoundAction.IGNORE)
+    private Process process;
 }
