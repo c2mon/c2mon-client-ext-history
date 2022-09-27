@@ -17,7 +17,7 @@
 package cern.c2mon.client.ext.history.alarm;
 
 
-import cern.c2mon.client.ext.history.es_publisher.entity.sub.MapToStringConverter;
+import cern.c2mon.client.ext.history.data.utilities.MapToStringConverter;
 import lombok.Data;
 import org.hibernate.annotations.Type;
 

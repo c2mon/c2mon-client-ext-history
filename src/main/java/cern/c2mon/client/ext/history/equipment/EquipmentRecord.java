@@ -1,10 +1,19 @@
 package cern.c2mon.client.ext.history.equipment;
 
+import java.util.Set;
+
+import cern.c2mon.client.ext.history.process.Process;
+import cern.c2mon.client.ext.history.supervision.ServerSupervisionEvent;
 import lombok.Data;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -28,7 +37,15 @@ public class EquipmentRecord {
     @Column(name = "eqstate_tagid")
     private Integer stateTagId;
 
-    /*@Column(name = "eqaddress")
+    @OneToOne(cascade = CascadeType.ALL, fetch= FetchType.EAGER)
+    @JoinColumn(name = "eq_procid", referencedColumnName = "procid", insertable = false, updatable = false)
+    private Process processData;
+
+    /*
+    @OneToMany(mappedBy = "id", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Set<ServerSupervisionEvent> supervisionEvent;
+
+    @Column(name = "eqaddress")
     private String address;
 
     @Column(name = "eqalive_tagid")

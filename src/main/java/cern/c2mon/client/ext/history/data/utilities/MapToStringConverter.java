@@ -1,4 +1,4 @@
-package cern.c2mon.client.ext.history.es_publisher.entity.sub;
+package cern.c2mon.client.ext.history.data.utilities;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -16,7 +16,7 @@ import lombok.extern.slf4j.Slf4j;
 @Converter
 public class MapToStringConverter implements AttributeConverter<Map<String, String>, String> {
 
-  ObjectMapper mapper = new ObjectMapper();
+  private final ObjectMapper mapper = new ObjectMapper();
 
   @Override
   public String convertToDatabaseColumn(Map<String, String> data) {

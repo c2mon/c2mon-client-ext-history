@@ -1,8 +1,6 @@
 package cern.c2mon.client.ext.history.es_publisher.repo;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
 import java.util.List;
 
 import org.springframework.data.domain.Page;

@@ -1,10 +1,23 @@
 package cern.c2mon.client.ext.history.data;
 
+import java.time.Instant;
+import java.util.List;
+import java.util.Map;
+
+import cern.c2mon.client.ext.history.alarm.AlarmRecord;
+import cern.c2mon.client.ext.history.equipment.EquipmentRecord;
+import cern.c2mon.client.ext.history.data.utilities.MapToStringConverter;
 import lombok.Data;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.Type;
@@ -27,4 +40,57 @@ public class DataTagRecord {
     @Column(name = "tagcontroltag")
     @Type(type="yes_no")
     private boolean controlTag;
+
+    @Column(name = "tagmode")
+    private Integer tagMode;//TAGMODE             INTEGER NOT NULL,
+
+    @Column(name = "tagdatatype")
+    private Class<?> tagDataType;//TAGDATATYPE         VARCHAR(200) NOT NULL,
+
+    @Column(name = "tagvalue")
+    private String tagValue;
+
+    @Column(name = "tagvaluedesc")
+    private String tagValueDesc;
+
+    @Column(name = "tagtimestamp")
+    private Instant tagTimeStamp;//TAGTIMESTAMP        TIMESTAMP(6),
+
+    @Column(name = "tagdaqtimestamp")
+    private Instant tagDaqTimestamp;
+
+    @Column(name = "tagsrvtimestamp")
+    private Instant tagServerTimestamp;
+
+    @Column(name = "tagmetadata")
+    @Convert(converter = MapToStringConverter.class)
+    private Map<String, String> tagMetaData;//TAGMETADATA         VARCHAR(4000),
+
+    @Column(name = "tagqualitycode")
+    private Integer tagQualityCode;
+
+    @Column(name = "tagQualityDesc")
+    private String tagQualityDesc;
+
+    @Column(name = "tagrule")
+    private String tagRule;
+
+    @Column(name = "tagruleids")
+    private String tagRuleIds;
+
+    @Column(name = "tagunit")
+    private String tagUnit;//TAGUNIT             VARCHAR(50),
+
+    @Column(name = "tagSimulated")
+    private Boolean tagSimulated;
+
+    @Column(name = "taglogged")
+    private Boolean tagLogged;//TAGLOGGED           INTEGER,
+
+    @OneToMany(mappedBy = "tagId", cascade = CascadeType.ALL, fetch= FetchType.EAGER)
+    private List<AlarmRecord> alarmList;
+
+    @OneToOne(cascade = CascadeType.ALL, fetch= FetchType.EAGER)
+    @JoinColumn(name = "tag_eqid", referencedColumnName = "eqid")
+    private EquipmentRecord equipment;
 }

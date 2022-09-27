@@ -1,8 +1,6 @@
 package cern.c2mon.client.ext.history.es_publisher.entity;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
