@@ -1,7 +1,9 @@
 package cern.c2mon.client.ext.history.supervision;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -17,5 +19,7 @@ public interface SupervisionEventRepository extends JpaRepository<ServerSupervis
     List<ServerSupervisionEvent> findAllDistinctByIdAndEventTimeBetweenOrderByEventTimeDesc(Long id, LocalDateTime startTime, LocalDateTime endTime);
 
     Page<ServerSupervisionEvent> findAllDistinctByIdOrderByEventTimeDesc(Long id, Pageable pageable);
+
+    Set<ServerSupervisionEvent> findByEventInstantBetween(Instant from, Instant to);
 
 }

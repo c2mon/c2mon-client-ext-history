@@ -14,6 +14,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import java.time.Instant;
 import java.time.LocalDateTime;
 
 import org.hibernate.annotations.NotFound;
@@ -38,6 +40,8 @@ public class ServerSupervisionEvent {
     @Column(name = "SUL_DATE")
     private LocalDateTime eventTime;
 
+    @Column(name = "SUL_DATE", insertable = false, updatable = false)
+    private Instant eventInstant;
 
     @Column(name = "SUL_STATUS")
     private String status;
