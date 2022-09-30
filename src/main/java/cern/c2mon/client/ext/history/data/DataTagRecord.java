@@ -6,7 +6,7 @@ import java.util.Map;
 
 import cern.c2mon.client.ext.history.alarm.AlarmRecord;
 import cern.c2mon.client.ext.history.equipment.EquipmentRecord;
-import cern.c2mon.client.ext.history.data.utilities.MapToStringConverter;
+import cern.c2mon.client.ext.history.data.utilities.MapConverter;
 import lombok.Data;
 
 import javax.persistence.CascadeType;
@@ -63,8 +63,8 @@ public class DataTagRecord {
     private Instant tagServerTimestamp;
 
     @Column(name = "tagmetadata")
-    @Convert(converter = MapToStringConverter.class)
-    private Map<String, String> tagMetaData;//TAGMETADATA         VARCHAR(4000),
+    @Convert(converter = MapConverter.class)
+    private Map<String, Object> tagMetaData;//TAGMETADATA         VARCHAR(4000),
 
     @Column(name = "tagqualitycode")
     private Integer tagQualityCode;
@@ -93,4 +93,6 @@ public class DataTagRecord {
     @OneToOne(cascade = CascadeType.ALL, fetch= FetchType.EAGER)
     @JoinColumn(name = "tag_eqid", referencedColumnName = "eqid")
     private EquipmentRecord equipment;
+
+
 }

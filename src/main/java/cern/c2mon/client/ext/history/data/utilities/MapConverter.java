@@ -11,15 +11,13 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import lombok.extern.slf4j.Slf4j;
-
 @Converter
-public class MapToStringConverter implements AttributeConverter<Map<String, String>, String> {
+public class MapConverter implements AttributeConverter<Map<String, Object>, String> {
 
   private final ObjectMapper mapper = new ObjectMapper();
 
   @Override
-  public String convertToDatabaseColumn(Map<String, String> data) {
+  public String convertToDatabaseColumn(Map<String, Object> data) {
     String value = "";
     try {
       value = mapper.writeValueAsString(data);
@@ -30,9 +28,9 @@ public class MapToStringConverter implements AttributeConverter<Map<String, Stri
   }
 
   @Override
-  public Map<String, String> convertToEntityAttribute(String data) {
+  public Map<String, Object> convertToEntityAttribute(String data) {
 
-    Map<String, String> mapValue = new HashMap<String, String>();
+    Map<String, Object> mapValue = new HashMap<String, Object>();
     TypeReference<HashMap<String, Object>> typeRef = new TypeReference<HashMap<String, Object>>() {
     };
     try {
