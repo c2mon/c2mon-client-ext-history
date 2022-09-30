@@ -10,6 +10,8 @@
             <dep groupId="org.mybatis" product="mybatis-spring" version="2.0.6"/>
 
             <!-- 3rd party dependencies -->
+            <dep groupId="com.fasterxml.jackson.dataformat" product="jackson-dataformat-xml" version="2.11.1"/>
+            <dep groupId="com.fasterxml.jackson.datatype" product="jackson-datatype-jsr310"/>
             <dep groupId="org.hsqldb" product="hsqldb" version="2.3.4"/>
             <dep groupId="org.springframework" product="spring-context" version="5.1.2.RELEASE"/>
             <dep groupId="org.springframework.boot" product="spring-boot" version="2.1.1.RELEASE"/>

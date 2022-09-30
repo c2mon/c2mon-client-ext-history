@@ -17,7 +17,7 @@
 package cern.c2mon.client.ext.history.alarm;
 
 
-import cern.c2mon.client.ext.history.data.utilities.MapToStringConverter;
+import cern.c2mon.client.ext.history.data.utilities.MapConverter;
 import lombok.Data;
 import org.hibernate.annotations.Type;
 
@@ -77,11 +77,13 @@ public class AlarmRecord {
     @Column(name = "alarmmetadata")
     private String metadata;
 
-
     @Column(name = "alarmmetadata", insertable = false, updatable = false)
-    @Convert(converter = MapToStringConverter.class)
-    private Map<String, String> metadataMap;//TAGMETADATA         VARCHAR(4000),
+    @Convert(converter = MapConverter.class)
+    private Map<String, Object> metadataMap;
 
     @Column(name = "alarmoscillation")
-    private Integer alarmOscillation;
+    private Boolean alarmOscillation;
+
+    @Column(name = "alarmcondition")
+    private String alarmCondition;
 }
