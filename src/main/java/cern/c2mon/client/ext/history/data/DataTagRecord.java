@@ -7,7 +7,11 @@ import java.util.Map;
 import cern.c2mon.client.ext.history.alarm.AlarmRecord;
 import cern.c2mon.client.ext.history.equipment.EquipmentRecord;
 import cern.c2mon.client.ext.history.data.utilities.MapConverter;
+import cern.c2mon.client.ext.history.process.Process;
+import cern.c2mon.shared.client.configuration.api.equipment.Equipment;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -24,6 +28,7 @@ import org.hibernate.annotations.Type;
 
 @Entity
 @Data
+@NoArgsConstructor
 @Table(name = "datatag")
 public class DataTagRecord {
 
@@ -87,10 +92,10 @@ public class DataTagRecord {
     @Column(name = "taglogged")
     private Boolean tagLogged;//TAGLOGGED           INTEGER,
 
-    @OneToMany(mappedBy = "tagId", cascade = CascadeType.ALL, fetch= FetchType.EAGER)
+    @OneToMany(mappedBy = "tagId", fetch= FetchType.EAGER)
     private List<AlarmRecord> alarmList;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch= FetchType.EAGER)
+    @OneToOne(fetch= FetchType.EAGER)
     @JoinColumn(name = "tag_eqid", referencedColumnName = "eqid")
     private EquipmentRecord equipment;
 
