@@ -43,7 +43,7 @@ public interface DataTagRepoService extends JpaRepository<DataTagRecord, Long>{
             @Param("startTime") Instant startTime,
             @Param("endTime") Instant endTime);
 
-    Page<DataTagRecord> findAllAfterByOrderByTagTimeStampAsc(
+    Page<DataTagRecord> findAllByTagServerTimestampAfterOrderByTagTimeStampAsc(
             @Param("startTime") Instant startTime,
             Pageable pageable);
 
