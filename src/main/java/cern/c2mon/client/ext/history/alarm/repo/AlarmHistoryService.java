@@ -19,12 +19,13 @@ package cern.c2mon.client.ext.history.alarm.repo;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import cern.c2mon.client.ext.history.alarm.AlarmLog;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+
+import cern.c2mon.client.ext.history.alarm.AlarmLog;
 
 /**
  * This service allows querying {@link AlarmLog} history from the c2mon history database.
