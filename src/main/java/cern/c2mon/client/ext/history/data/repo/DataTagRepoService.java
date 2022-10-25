@@ -17,7 +17,19 @@
 package cern.c2mon.client.ext.history.data.repo;
 
 import cern.c2mon.client.ext.history.data.DataTagRecord;
+<<<<<<< HEAD
 import org.springframework.data.jpa.repository.JpaRepository;
+=======
+import cern.c2mon.client.ext.history.supervision.ServerSupervisionEvent;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import java.time.Instant;
+>>>>>>> 998532854423d1175daf0366f62267e70e8955fe
 import java.util.List;
 import java.util.Optional;
 
@@ -28,4 +40,20 @@ public interface DataTagRepoService extends JpaRepository<DataTagRecord, Long>{
 
     List<DataTagRecord> findFirst10ByNameContainingIgnoreCase(String dataTagName);
 
+<<<<<<< HEAD
+=======
+    @Query("SELECT a FROM DataTagRecord a WHERE "
+            + "a.tagServerTimestamp BETWEEN :startTime AND :endTime "
+            + "ORDER BY a.tagServerTimestamp ASC")
+    List<DataTagRecord> findByTagServerTimestampBetweenByOrderByTagTimeStampDesc(
+            @Param("startTime") Instant startTime,
+            @Param("endTime") Instant endTime);
+
+    Page<DataTagRecord> findAllByTagServerTimestampAfterOrderByTagTimeStampAsc(
+            @Param("startTime") Instant startTime,
+            Pageable pageable);
+
+    Page<DataTagRecord> findAllByOrderByTagTimeStampDesc(Pageable pageable);
+
+>>>>>>> 998532854423d1175daf0366f62267e70e8955fe
 }

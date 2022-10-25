@@ -1,6 +1,7 @@
 package cern.c2mon.client.ext.history.supervision;
 
-
+import cern.c2mon.client.ext.history.equipment.EquipmentRecord;
+import cern.c2mon.client.ext.history.process.Process;
 import lombok.Data;
 
 import javax.persistence.Column;
@@ -29,6 +30,8 @@ public class ServerSupervisionEvent {
     @Column(name = "SUL_DATE")
     private LocalDateTime eventTime;
 
+    @Column(name = "SUL_DATE", insertable = false, updatable = false)
+    private Instant eventInstant;
 
     @Column(name = "SUL_STATUS")
     private String status;
@@ -37,5 +40,13 @@ public class ServerSupervisionEvent {
     @Column(name = "SUL_MESSAGE")
     private String sul_message;
 
+    @ManyToOne
+    @JoinColumn(name = "sul_id")
+    @NotFound(action = NotFoundAction.IGNORE)
+    private EquipmentRecord equipmentRecord;
 
+    @ManyToOne
+    @JoinColumn(name = "sul_id", insertable = false, updatable = false)
+    @NotFound(action = NotFoundAction.IGNORE)
+    private Process process;
 }

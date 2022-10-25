@@ -17,14 +17,29 @@
 package cern.c2mon.client.ext.history.alarm;
 
 
+<<<<<<< HEAD
+=======
+import cern.c2mon.client.ext.history.data.utilities.MapConverter;
+>>>>>>> 998532854423d1175daf0366f62267e70e8955fe
 import lombok.Data;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.Column;
+<<<<<<< HEAD
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.time.LocalDateTime;
+=======
+import javax.persistence.Convert;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.util.Map;
+>>>>>>> 998532854423d1175daf0366f62267e70e8955fe
 
 @Entity
 @Data
@@ -38,6 +53,12 @@ public class AlarmRecord {
     @Column(name = "alarm_tagid")
     private Long tagId;
 
+<<<<<<< HEAD
+=======
+    @Column(name = "alarmpriority")
+    private Integer alarmPriority;
+
+>>>>>>> 998532854423d1175daf0366f62267e70e8955fe
     @Column(name = "alarmffamily")
     private String faultFamily;
 
@@ -57,9 +78,31 @@ public class AlarmRecord {
     @Column(name ="alarmsourcetime")
     private LocalDateTime sourceTimestamp;
 
+<<<<<<< HEAD
+=======
+    @Column(name ="alarmtime", insertable = false, updatable = false)
+    private Instant instantTimestamp;
+
+    @Column(name ="alarmsourcetime", insertable = false, updatable = false)
+    private Instant instantSourceTimestamp;
+
+>>>>>>> 998532854423d1175daf0366f62267e70e8955fe
     @Column(name = "alarminfo")
     private String info;
 
     @Column(name = "alarmmetadata")
     private String metadata;
+<<<<<<< HEAD
+=======
+
+    @Column(name = "alarmmetadata", insertable = false, updatable = false)
+    @Convert(converter = MapConverter.class)
+    private Map<String, Object> metadataMap;
+
+    @Column(name = "alarmoscillation")
+    private Boolean alarmOscillation;
+
+    @Column(name = "alarmcondition")
+    private String alarmCondition;
+>>>>>>> 998532854423d1175daf0366f62267e70e8955fe
 }
