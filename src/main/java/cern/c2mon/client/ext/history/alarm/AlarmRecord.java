@@ -9,9 +9,8 @@
  *****************************************************************************/
 package cern.c2mon.client.ext.history.alarm;
 
-import cern.c2mon.client.ext.history.data.utilities.MapConverter;
-import lombok.Data;
-import org.hibernate.annotations.Type;
+import java.time.Instant;
+import java.util.Map;
 
 import javax.persistence.Column;
 import javax.persistence.Convert;
@@ -19,9 +18,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.util.Map;
+import org.hibernate.annotations.Type;
+
+import cern.c2mon.client.ext.history.data.utilities.MapConverter;
+import lombok.Data;
 
 @Entity
 @Data

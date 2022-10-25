@@ -1,14 +1,435 @@
 [CBNG] [product.xml] 'directory' attribute: Ignoring everything after 'client' for value c2mon/client/c2mon-client-ext-history 
+[CBNG] Disabling task ':test' (set via junit.enabled)
 :packagingTar SKIPPED
-:compileJava UP-TO-DATE
+:compileJava
 :processResources UP-TO-DATE
-:classes UP-TO-DATE
-:jar UP-TO-DATE
-:javadoc UP-TO-DATE
-:javadocJar UP-TO-DATE
-:sourcesJar UP-TO-DATE
-:assemble UP-TO-DATE
-:check
+:classes
+:jar
+:javadoc
+Picked up JAVA_TOOL_OPTIONS: -Dsun.awt.disablegrab=true
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/tag/HistoryTagImpl.java:45: error: self-closing element not allowed
+ * can be created using {@link HistoryTagConfiguration#createExpression()}<br/>
+                                                                          ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/tag/HistoryTagImpl.java:46: error: self-closing element not allowed
+ * <br/>
+   ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/tag/HistoryTagImpl.java:50: error: reference not found
+ * @see HistoryTagManager#subscribe(HistoryTagImpl)
+        ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/HistorySessionFactory.java:31: error: self-closing element not allowed
+ * or a {@link HistoryProvider}.<br/>
+                                ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/beans/ShortTermLogHistoryRequestBean.java:24: error: self-closing element not allowed
+ * This class is passed as an parameter when requesting history data for tags.<br/>
+                                                                              ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/SqlSavedHistoryEventsProviderDAO.java:32: error: self-closing element not allowed
+ * Implementation of the {@link SavedHistoryEventsProvider}<br/>
+                                                           ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/SqlSavedHistoryEventsProviderDAO.java:33: error: self-closing element not allowed
+ * <br/>
+   ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/player/event/ClockListener.java:20: error: reference not found
+ * Listener for the {@link Clock}
+                           ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/event/TimerQueueListener.java:21: error: reference not found
+ * Used by {@link TimerQueue} to inform about events
+                  ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:33: error: tag not supported in the generated HTML version: tt
+ * Corresponding to each <tt>Timer</tt> object is a single background thread
+                         ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:41: error: tag not supported in the generated HTML version: tt
+ * After the last live reference to a <tt>Timer</tt> object goes away <i>and</i>
+                                      ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:48: error: tag not supported in the generated HTML version: tt
+ * <tt>cancel</tt> method.
+   ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:52: error: tag not supported in the generated HTML version: tt
+ * because its <tt>stop</tt> method is invoked, any further attempt to schedule
+               ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:53: error: tag not supported in the generated HTML version: tt
+ * a task on the timer will result in an <tt>IllegalStateException</tt>, as if
+                                         ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:54: error: tag not supported in the generated HTML version: tt
+ * the timer's <tt>cancel</tt> method had been invoked.
+               ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:57: error: tag not supported in the generated HTML version: tt
+ * This class is thread-safe: multiple threads can share a single <tt>Timer</tt>
+                                                                  ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:62: error: tag not supported in the generated HTML version: tt
+ * using the <tt>Object.wait(long)</tt> method.
+             ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerTask.java:24: error: reference not found
+ * @see     Timer
+            ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/exceptions/NoHistoryProviderAvailableException.java:20: error: reference not found
+ * Is thrown to indicate that no {@link HistoryProvider} is available
+                                        ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:33: error: self-closing element not allowed
+ * <code>release()</code>.<br/>
+                          ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:34: error: self-closing element not allowed
+ * <br/>
+   ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:35: error: self-closing element not allowed
+ * Example of a method were you want to collect threads and their items:<br/>
+                                                                        ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:36: error: self-closing element not allowed
+ * <br/>
+   ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:38: error: self-closing element not allowed
+   private final ThreadCollector&lt;Long&gt; threadCollector = new ThreadCollector&lt;Long&gt;(800, 19000);<br/>
+                                                                                                           ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:39: error: self-closing element not allowed
+   <br/>
+   ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:40: error: self-closing element not allowed
+   private void initializeTagHistory(final Collection&lt;Long&gt; tags) {<br/>
+                                                                         ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:41: error: self-closing element not allowed
+<br/>    
+^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:42: error: self-closing element not allowed
+    &nbsp;// Only the first thread that calls this<br/> 
+                                                  ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:43: error: self-closing element not allowed
+    &nbsp;// method gets the list of all the tags.<br/>
+                                                  ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:44: error: self-closing element not allowed
+    &nbsp;// For all the other threads it return null<br/>
+                                                     ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:45: error: self-closing element not allowed
+    &nbsp;final Collection&lt;Long&gt; tagIds = threadCollector.collect(tags);<br/>
+                                                                              ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:46: error: self-closing element not allowed
+<br/>    
+^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:47: error: self-closing element not allowed
+    &nbsp;if (tagIds == null) {<br/>
+                               ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:48: error: self-closing element not allowed
+    &nbsp;&nbsp;return;<br/>
+                       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:49: error: self-closing element not allowed
+    &nbsp;}<br/>
+           ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:50: error: self-closing element not allowed
+<br/>
+^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:51: error: self-closing element not allowed
+    &nbsp;// Main thread want to do some work<br/>
+                                             ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:52: error: self-closing element not allowed
+<br/>    
+^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:53: error: self-closing element not allowed
+    &nbsp;// All the other threads are released, <br/>
+                                                 ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:54: error: self-closing element not allowed
+    &nbsp;// ie. they return from the collect method<br/>
+                                                    ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:55: error: self-closing element not allowed
+    &nbsp;threadCollector.release();<br/>
+                                    ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:56: error: self-closing element not allowed
+   }<br/>
+    ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTag.java:30: error: reference not found
+ * @see TagService#subscribe(HistoryTag)
+        ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagConfiguration.java:25: error: reference not found
+ * @see HistoryTagExpressionInterpreter
+        ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagConfiguration.java:26: error: reference not found
+ * @see HistoryTagImpl
+        ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagExpressionException.java:21: error: reference not found
+ * {@link HistoryProvider}
+          ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagRecord.java:26: error: reference not found
+ * {@link HistoryTagImpl} to calculate the return value of
+          ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagRecord.java:27: error: reference not found
+ * {@link HistoryTagImpl#getValue()}.
+          ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagResultType.java:23: error: reference not found
+ * The types of data that can be returned from a {@link HistoryTagImpl}. Is the type
+                                                        ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/NoHistoryProviderException.java:21: error: reference not found
+ * {@link HistoryProvider}
+          ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/IllegalTimespanException.java:21: error: reference not found
+ * {@link HistoryProvider}
+          ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/HistoryPlayerNotActiveException.java:21: error: reference not found
+ * {@link HistoryProvider}
+          ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/HistoryProviderException.java:21: error: reference not found
+ * {@link HistoryProvider}
+          ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/id/TagValueUpdateId.java:20: error: reference not found
+ * This class is used to identify one or multiple {@link TagValueUpdate}
+                                                         ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/event/HistoryPlayerListener.java:24: error: reference not found
+ * Is used by the {@link cern.c2mon.client.ext.history.HistoryPlayer} to
+                         ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/event/PlaybackControlListener.java:20: error: reference not found
+ * Is used by the {@link PlaybackControl} to inform about events
+                         ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryProvider.java:25: error: self-closing element not allowed
+ * Interface that provides functions to get data from the history.<br/>
+                                                                  ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/SavedHistoryEventsProvider.java:23: error: self-closing element not allowed
+ * the database<br/>
+               ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/SupervisionEventRequest.java:23: error: reference not found
+ * {@link HistoryProvider#getSupervisionEvents(java.util.Collection)} when
+          ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/data/utilities/MemoryConsumptionAdviser.java:27: error: reference not found
+ * {@link HistoryLoader} before loading a new bunch of history.
+          ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/beans/HistoryRecordBean.java:232: error: @param name not found
+   * @param tagValue the tagValue to set
+            ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/beans/HistoryRecordBean.java:234: warning: no @param for tagValueDesc
+  public void setTagValueDesc(final String tagValueDesc) {
+              ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryLoadingManager.java:85: error: self-closing element not allowed
+   * queue.<br/><br/>
+           ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryLoadingManager.java:85: error: self-closing element not allowed
+   * queue.<br/><br/>
+                ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryLoadingManager.java:96: error: self-closing element not allowed
+   * Adds the tags AND all the supervision events connected to them<br/>
+                                                                   ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryLoadingManager.java:97: error: self-closing element not allowed
+   * <br/>
+     ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryProvider.java:34: error: self-closing element not allowed
+   * Cancels all requests, they will return empty lists.<br/>
+                                                        ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryProvider.java:53: error: self-closing element not allowed
+   *         ids in the given time periode. <br/>
+                                            ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryProvider.java:69: error: self-closing element not allowed
+   *         ids in the given time periode <br/>
+                                           ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryProvider.java:97: error: self-closing element not allowed
+   *         ids in the given time periode <br/>
+                                           ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryProvider.java:138: error: self-closing element not allowed
+   *         given tag ids. <br/>
+                            ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/config/HistoryDataSourceConfigTest.java:38: warning: no @return
+  public DataSource historyDataSource() {
+                    ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryLoader.java:230: error: self-closing element not allowed
+   * tags, and not called in a loop.<br/>
+                                    ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryLoader.java:231: error: self-closing element not allowed
+   * <br/>
+     ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryStore.java:445: error: self-closing element not allowed
+   * added is returned.<br/>
+                       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryStore.java:446: error: self-closing element not allowed
+   * <br/>
+     ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryStore.java:612: error: reference not found
+   * initialized. Call the {@link #addInitialHistoryData(Collection, Timestamp)}
+                                  ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryStore.java:866: error: reference not found
+   *          The dataIds of the {@link DataTagHistory}s to remove
+                                        ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryStore.java:1012: error: self-closing element not allowed
+   *          no possible way of knowing it. <br/>
+                                             ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryStore.java:1106: error: self-closing element not allowed
+   * returns the correct value.<br/>
+                               ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryStore.java:1112: error: reference not found
+   * @see #addInitialHistoryData(Collection)
+          ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/HistorySessionFactory.java:57: error: reference not found
+   *          the {@link Tag}. Like the
+                         ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/HistorySessionFactory.java:58: error: reference not found
+   *          {@link Tag#getType()}.
+                     ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/HistorySessionFactory.java:77: error: reference not found
+   *          the {@link Tag}. Like the
+                         ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/HistorySessionFactory.java:78: error: reference not found
+   *          {@link Tag#getType()}.
+                     ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/HistorySessionFactory.java:92: error: reference not found
+   * @return A {@link SavedHistoryEventProvider} which can be used to easily get
+                      ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/data/filter/DailySnapshotSmartFilter.java:52: error: unexpected content
+   * @see {@link #addDailySnapshotValues(Collection)}
+     ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/data/filter/DailySnapshotSmartFilter.java:61: error: unexpected content
+   * @see {@link #addDailySnapshotValues(Collection)}
+     ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/HistoryProviderFactoryImpl.java:53: warning: no @param for historySessionFactory
+  public HistoryProviderFactoryImpl(final ClientDataTagRequestCallback clientDataTagRequestCallback, HistorySessionFactory historySessionFactory) {
+         ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/HistoryPlayerCoreAccess.java:119: error: reference not found
+   * @see #registerTagUpdateListener(TagUpdateListener, Long, TagValueUpdate)
+          ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/HistoryPlayerImpl.java:494: error: reference not found
+   * @see #registerTagUpdateListener(TagUpdateListener, Long, TagValueUpdate)
+          ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmHistoryService.java:100: warning: no @param for endTime
+  Page<AlarmLog> findAllDistinctByTimestampBetweenOrderByTimestampDesc(
+                 ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:24: warning: no description for @param
+     * @param faultFamily
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:25: warning: no description for @return
+     * @return
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:31: warning: no description for @param
+     * @param faultMember
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:32: warning: no description for @return
+     * @return
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:38: warning: no description for @param
+     * @param faultCode
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:39: warning: no description for @return
+     * @return
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:45: warning: no description for @param
+     * @param faultFamily
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:46: warning: no description for @param
+     * @param faultMember
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:47: warning: no description for @return
+     * @return
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:54: warning: no description for @param
+     * @param faultFamily
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:55: warning: no description for @param
+     * @param faultCode
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:56: warning: no description for @return
+     * @return
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:63: warning: no description for @param
+     * @param faultMember
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:64: warning: no description for @param
+     * @param faultCode
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:65: warning: no description for @return
+     * @return
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:72: warning: no description for @param
+     * @param faultFamily
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:73: warning: no description for @param
+     * @param faultMember
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:74: warning: no description for @param
+     * @param faultCode
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:75: warning: no description for @return
+     * @return
+       ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:84: warning: no @param for configId
+    Set<LaserAlarmLogUserConfig> findAllActiveAlarmsByConfigIdAndPriorityAndTextAtGivenTime(
+                                 ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:84: warning: no @param for time
+    Set<LaserAlarmLogUserConfig> findAllActiveAlarmsByConfigIdAndPriorityAndTextAtGivenTime(
+                                 ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:84: warning: no @param for text
+    Set<LaserAlarmLogUserConfig> findAllActiveAlarmsByConfigIdAndPriorityAndTextAtGivenTime(
+                                 ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:84: warning: no @param for priorities
+    Set<LaserAlarmLogUserConfig> findAllActiveAlarmsByConfigIdAndPriorityAndTextAtGivenTime(
+                                 ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:84: warning: no @return
+    Set<LaserAlarmLogUserConfig> findAllActiveAlarmsByConfigIdAndPriorityAndTextAtGivenTime(
+                                 ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:102: warning: no @param for configId
+    Set<LaserAlarmLogUserConfig> findAllActiveAlarmsByConfigIdAndPriorityAtGivenTime(
+                                 ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:102: warning: no @param for time
+    Set<LaserAlarmLogUserConfig> findAllActiveAlarmsByConfigIdAndPriorityAtGivenTime(
+                                 ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:102: warning: no @param for priorities
+    Set<LaserAlarmLogUserConfig> findAllActiveAlarmsByConfigIdAndPriorityAtGivenTime(
+                                 ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:102: warning: no @return
+    Set<LaserAlarmLogUserConfig> findAllActiveAlarmsByConfigIdAndPriorityAtGivenTime(
+                                 ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:127: warning: no @param for clock
+  public TimerQueue(final TimerQueueClock clock) {
+         ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:143: warning: no @param for clock
+  public TimerQueue(final String name, final TimerQueueClock clock) {
+         ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:157: error: tag not supported in the generated HTML version: tt
+   *           if <tt>delay</tt> is negative, or
+                  ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:158: error: tag not supported in the generated HTML version: tt
+   *           <tt>delay + System.currentTimeMillis()</tt> is negative.
+               ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:178: error: tag not supported in the generated HTML version: tt
+   *           if <tt>time.getTime()</tt> is negative.
+                  ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:199: error: tag not supported in the generated HTML version: tt
+   * <tt>Object.wait(long)</tt> is accurate).
+     ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:217: error: tag not supported in the generated HTML version: tt
+   *           if <tt>delay</tt> is negative, or
+                  ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:218: error: tag not supported in the generated HTML version: tt
+   *           <tt>delay + System.currentTimeMillis()</tt> is negative.
+               ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:243: error: tag not supported in the generated HTML version: tt
+   * <tt>Object.wait(long)</tt> is accurate).
+     ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:261: error: tag not supported in the generated HTML version: tt
+   *           if <tt>time.getTime()</tt> is negative.
+                  ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:284: error: tag not supported in the generated HTML version: tt
+   * <tt>Object.wait(long)</tt> is accurate).
+     ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:303: error: tag not supported in the generated HTML version: tt
+   *           if <tt>delay</tt> is negative, or
+                  ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:304: error: tag not supported in the generated HTML version: tt
+   *           <tt>delay + System.currentTimeMillis()</tt> is negative.
+               ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:329: error: tag not supported in the generated HTML version: tt
+   * <tt>Object.wait(long)</tt> is accurate).
+     ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/updates/HistoryTagValueUpdateImpl.java:138: warning: no @param for daqTimestamp
+  public HistoryTagValueUpdateImpl(final Long tagId, final DataTagQuality dataTagQuality, final Object value,
+         ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/updates/HistoryTagValueUpdateImpl.java:180: warning: no @param for daqTimestamp
+  public HistoryTagValueUpdateImpl(final Long tagId, final DataTagQuality dataTagQuality, final Object value,
+         ^
+/opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/data/utilities/SpeedEstimate.java:169: warning: no @param for unitsTotalTime
+  protected void setUnits(final long unitsMeasured, final long unitsTotalTime) {
+                 ^
+100 errors
+37 warnings
+:javadocJar
+:sourcesJar
+:assemble
+:compileTestJava UP-TO-DATE
+:processTestResources UP-TO-DATE
+:testClasses UP-TO-DATE
+:test SKIPPED
+:jacocoTestReport
+Code coverage report (JaCoCo): /opt/mbuttner/git/c2mon-client-ext-history/build/reports/jacoco/test/html/index.html
+:check UP-TO-DATE
 :build
 :generateMetadataFileForCbngPublication SKIPPED
 :generatePomFileForCbngPublication
@@ -19,6 +440,287 @@
 :fullPublishTask
 :deployToNfs SKIPPED
 :devrelease
+
+
+---------------------------------------------------------
+Summary of warnings and errors
+---------------------------------------------------------
+
+ - Picked up JAVA_TOOL_OPTIONS: -Dsun.awt.disablegrab=true
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/tag/HistoryTagImpl.java:45: error: self-closing element not allowed
+ -  * can be created using {@link HistoryTagConfiguration#createExpression()}<br/>
+ -                                                                           ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/tag/HistoryTagImpl.java:46: error: self-closing element not allowed
+ -  * <br/>
+ -    ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/tag/HistoryTagImpl.java:50: error: reference not found
+ -  * @see HistoryTagManager#subscribe(HistoryTagImpl)
+ -         ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/HistorySessionFactory.java:31: error: self-closing element not allowed
+ -  * or a {@link HistoryProvider}.<br/>
+ -                                 ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/beans/ShortTermLogHistoryRequestBean.java:24: error: self-closing element not allowed
+ -  * This class is passed as an parameter when requesting history data for tags.<br/>
+ -                                                                               ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/SqlSavedHistoryEventsProviderDAO.java:32: error: self-closing element not allowed
+ -  * Implementation of the {@link SavedHistoryEventsProvider}<br/>
+ -                                                            ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/SqlSavedHistoryEventsProviderDAO.java:33: error: self-closing element not allowed
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/player/event/ClockListener.java:20: error: reference not found
+ -  * Listener for the {@link Clock}
+ -                            ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/event/TimerQueueListener.java:21: error: reference not found
+ -  * Used by {@link TimerQueue} to inform about events
+ -                   ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:33: error: tag not supported in the generated HTML version: tt
+ -  * Corresponding to each <tt>Timer</tt> object is a single background thread
+ -                          ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:41: error: tag not supported in the generated HTML version: tt
+ -  * After the last live reference to a <tt>Timer</tt> object goes away <i>and</i>
+ -                                       ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:48: error: tag not supported in the generated HTML version: tt
+ -  * <tt>cancel</tt> method.
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:52: error: tag not supported in the generated HTML version: tt
+ -  * because its <tt>stop</tt> method is invoked, any further attempt to schedule
+ -                ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:53: error: tag not supported in the generated HTML version: tt
+ -  * a task on the timer will result in an <tt>IllegalStateException</tt>, as if
+ -                                          ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:54: error: tag not supported in the generated HTML version: tt
+ -  * the timer's <tt>cancel</tt> method had been invoked.
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:57: error: tag not supported in the generated HTML version: tt
+ -  * This class is thread-safe: multiple threads can share a single <tt>Timer</tt>
+ -                                                                   ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:62: error: tag not supported in the generated HTML version: tt
+ -  * using the <tt>Object.wait(long)</tt> method.
+ -              ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerTask.java:24: error: reference not found
+ -  * @see     Timer
+ -             ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/exceptions/NoHistoryProviderAvailableException.java:20: error: reference not found
+ -  * Is thrown to indicate that no {@link HistoryProvider} is available
+ -                                         ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:33: error: self-closing element not allowed
+ -  * <code>release()</code>.<br/>
+ -                           ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:34: error: self-closing element not allowed
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:35: error: self-closing element not allowed
+ -  * Example of a method were you want to collect threads and their items:<br/>
+ -                                                                         ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:36: error: self-closing element not allowed
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:38: error: self-closing element not allowed
+ -    private final ThreadCollector&lt;Long&gt; threadCollector = new ThreadCollector&lt;Long&gt;(800, 19000);<br/>
+ -                                                                                                            ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:39: error: self-closing element not allowed
+ -    <br/>
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:40: error: self-closing element not allowed
+ -    private void initializeTagHistory(final Collection&lt;Long&gt; tags) {<br/>
+ -                                                                          ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:41: error: self-closing element not allowed
+ - <br/>    
+ - ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:42: error: self-closing element not allowed
+ -     &nbsp;// Only the first thread that calls this<br/> 
+ -                                                   ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:43: error: self-closing element not allowed
+ -     &nbsp;// method gets the list of all the tags.<br/>
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:44: error: self-closing element not allowed
+ -     &nbsp;// For all the other threads it return null<br/>
+ -                                                      ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:45: error: self-closing element not allowed
+ -     &nbsp;final Collection&lt;Long&gt; tagIds = threadCollector.collect(tags);<br/>
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:46: error: self-closing element not allowed
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:47: error: self-closing element not allowed
+ -     &nbsp;if (tagIds == null) {<br/>
+ -                                ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:48: error: self-closing element not allowed
+ -     &nbsp;&nbsp;return;<br/>
+ -                        ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:49: error: self-closing element not allowed
+ -     &nbsp;}<br/>
+ -            ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:50: error: self-closing element not allowed
+ - <br/>
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:51: error: self-closing element not allowed
+ -     &nbsp;// Main thread want to do some work<br/>
+ -                                              ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:52: error: self-closing element not allowed
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:53: error: self-closing element not allowed
+ -     &nbsp;// All the other threads are released, <br/>
+ -                                                  ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:54: error: self-closing element not allowed
+ -     &nbsp;// ie. they return from the collect method<br/>
+ -                                                     ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:55: error: self-closing element not allowed
+ -     &nbsp;threadCollector.release();<br/>
+ -                                     ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/components/concurrency/ThreadCollector.java:56: error: self-closing element not allowed
+ -    }<br/>
+ -     ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTag.java:30: error: reference not found
+ -  * @see TagService#subscribe(HistoryTag)
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagConfiguration.java:25: error: reference not found
+ -  * @see HistoryTagExpressionInterpreter
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagConfiguration.java:26: error: reference not found
+ -  * @see HistoryTagImpl
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagExpressionException.java:21: error: reference not found
+ -  * {@link HistoryProvider}
+ -           ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagRecord.java:26: error: reference not found
+ -  * {@link HistoryTagImpl} to calculate the return value of
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagRecord.java:27: error: reference not found
+ -  * {@link HistoryTagImpl#getValue()}.
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/tag/HistoryTagResultType.java:23: error: reference not found
+ -  * The types of data that can be returned from a {@link HistoryTagImpl}. Is the type
+ -                                                         ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/NoHistoryProviderException.java:21: error: reference not found
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/IllegalTimespanException.java:21: error: reference not found
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/HistoryPlayerNotActiveException.java:21: error: reference not found
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/exception/HistoryProviderException.java:21: error: reference not found
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/id/TagValueUpdateId.java:20: error: reference not found
+ -  * This class is used to identify one or multiple {@link TagValueUpdate}
+ -                                                          ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/event/HistoryPlayerListener.java:24: error: reference not found
+ -  * Is used by the {@link cern.c2mon.client.ext.history.HistoryPlayer} to
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/event/PlaybackControlListener.java:20: error: reference not found
+ -  * Is used by the {@link PlaybackControl} to inform about events
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryProvider.java:25: error: self-closing element not allowed
+ -  * Interface that provides functions to get data from the history.<br/>
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/SavedHistoryEventsProvider.java:23: error: self-closing element not allowed
+ -  * the database<br/>
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/SupervisionEventRequest.java:23: error: reference not found
+ -  * {@link HistoryProvider#getSupervisionEvents(java.util.Collection)} when
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/data/utilities/MemoryConsumptionAdviser.java:27: error: reference not found
+ -  * {@link HistoryLoader} before loading a new bunch of history.
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/beans/HistoryRecordBean.java:232: error: @param name not found
+ -    * @param tagValue the tagValue to set
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/beans/HistoryRecordBean.java:234: warning: no @param for tagValueDesc
+ -   public void setTagValueDesc(final String tagValueDesc) {
+ -               ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryLoadingManager.java:85: error: self-closing element not allowed
+ -    * queue.<br/><br/>
+ -                 ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryLoadingManager.java:96: error: self-closing element not allowed
+ -    * Adds the tags AND all the supervision events connected to them<br/>
+ -                                                                    ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryLoadingManager.java:97: error: self-closing element not allowed
+ -    * <br/>
+ -      ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryProvider.java:34: error: self-closing element not allowed
+ -    * Cancels all requests, they will return empty lists.<br/>
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryProvider.java:53: error: self-closing element not allowed
+ -    *         ids in the given time periode. <br/>
+ -                                             ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryProvider.java:69: error: self-closing element not allowed
+ -    *         ids in the given time periode <br/>
+ -                                            ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryProvider.java:97: error: self-closing element not allowed
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/common/HistoryProvider.java:138: error: self-closing element not allowed
+ -    *         given tag ids. <br/>
+ -                             ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/config/HistoryDataSourceConfigTest.java:38: warning: no @return
+ -   public DataSource historyDataSource() {
+ -                     ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryLoader.java:230: error: self-closing element not allowed
+ -    * tags, and not called in a loop.<br/>
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryLoader.java:231: error: self-closing element not allowed
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryStore.java:445: error: self-closing element not allowed
+ -    * added is returned.<br/>
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryStore.java:446: error: self-closing element not allowed
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryStore.java:612: error: reference not found
+ -    * initialized. Call the {@link #addInitialHistoryData(Collection, Timestamp)}
+ -                                   ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryStore.java:866: error: reference not found
+ -    *          The dataIds of the {@link DataTagHistory}s to remove
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryStore.java:1012: error: self-closing element not allowed
+ -    *          no possible way of knowing it. <br/>
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryStore.java:1106: error: self-closing element not allowed
+ -    * returns the correct value.<br/>
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/data/HistoryStore.java:1112: error: reference not found
+ -    * @see #addInitialHistoryData(Collection)
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/HistorySessionFactory.java:57: error: reference not found
+ -    *          the {@link Tag}. Like the
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/HistorySessionFactory.java:58: error: reference not found
+ -    *          {@link Tag#getType()}.
+ -                      ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/HistorySessionFactory.java:77: error: reference not found
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/HistorySessionFactory.java:78: error: reference not found
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/dbaccess/HistorySessionFactory.java:92: error: reference not found
+ -    * @return A {@link SavedHistoryEventProvider} which can be used to easily get
+ -                       ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/data/filter/DailySnapshotSmartFilter.java:52: error: unexpected content
+ -    * @see {@link #addDailySnapshotValues(Collection)}
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/data/filter/DailySnapshotSmartFilter.java:61: error: unexpected content
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/HistoryProviderFactoryImpl.java:53: warning: no @param for historySessionFactory
+ -   public HistoryProviderFactoryImpl(final ClientDataTagRequestCallback clientDataTagRequestCallback, HistorySessionFactory historySessionFactory) {
+ -          ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/HistoryPlayerCoreAccess.java:119: error: reference not found
+ -    * @see #registerTagUpdateListener(TagUpdateListener, Long, TagValueUpdate)
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/HistoryPlayerImpl.java:494: error: reference not found
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmHistoryService.java:100: warning: no @param for endTime
+ -   Page<AlarmLog> findAllDistinctByTimestampBetweenOrderByTimestampDesc(
+ -                  ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:24: warning: no description for @param
+ -      * @param faultFamily
+ -        ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:25: warning: no description for @return
+ -      * @return
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:31: warning: no description for @param
+ -      * @param faultMember
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:32: warning: no description for @return
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:38: warning: no description for @param
+ -      * @param faultCode
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:39: warning: no description for @return
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:45: warning: no description for @param
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:46: warning: no description for @param
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:47: warning: no description for @return
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:54: warning: no description for @param
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:55: warning: no description for @param
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:56: warning: no description for @return
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:63: warning: no description for @param
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:64: warning: no description for @param
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:65: warning: no description for @return
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:72: warning: no description for @param
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:73: warning: no description for @param
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:74: warning: no description for @param
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/alarm/repo/AlarmRepoService.java:75: warning: no description for @return
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:84: warning: no @param for configId
+ -     Set<LaserAlarmLogUserConfig> findAllActiveAlarmsByConfigIdAndPriorityAndTextAtGivenTime(
+ -                                  ^
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:84: warning: no @param for time
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:84: warning: no @param for text
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:84: warning: no @param for priorities
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:84: warning: no @return
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:102: warning: no @param for configId
+ -     Set<LaserAlarmLogUserConfig> findAllActiveAlarmsByConfigIdAndPriorityAtGivenTime(
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:102: warning: no @param for time
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:102: warning: no @param for priorities
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/laser/repo/LaserAlarmEventRepoService.java:102: warning: no @return
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:127: warning: no @param for clock
+ -   public TimerQueue(final TimerQueueClock clock) {
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:143: warning: no @param for clock
+ -   public TimerQueue(final String name, final TimerQueueClock clock) {
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:157: error: tag not supported in the generated HTML version: tt
+ -    *           if <tt>delay</tt> is negative, or
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:158: error: tag not supported in the generated HTML version: tt
+ -    *           <tt>delay + System.currentTimeMillis()</tt> is negative.
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:178: error: tag not supported in the generated HTML version: tt
+ -    *           if <tt>time.getTime()</tt> is negative.
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:199: error: tag not supported in the generated HTML version: tt
+ -    * <tt>Object.wait(long)</tt> is accurate).
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:217: error: tag not supported in the generated HTML version: tt
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:218: error: tag not supported in the generated HTML version: tt
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:243: error: tag not supported in the generated HTML version: tt
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:261: error: tag not supported in the generated HTML version: tt
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:284: error: tag not supported in the generated HTML version: tt
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:303: error: tag not supported in the generated HTML version: tt
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:304: error: tag not supported in the generated HTML version: tt
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/playback/schedule/TimerQueue.java:329: error: tag not supported in the generated HTML version: tt
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/updates/HistoryTagValueUpdateImpl.java:138: warning: no @param for daqTimestamp
+ -   public HistoryTagValueUpdateImpl(final Long tagId, final DataTagQuality dataTagQuality, final Object value,
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/updates/HistoryTagValueUpdateImpl.java:180: warning: no @param for daqTimestamp
+ - /opt/mbuttner/git/c2mon-client-ext-history/src/main/java/cern/c2mon/client/ext/history/data/utilities/SpeedEstimate.java:169: warning: no @param for unitsTotalTime
+ -   protected void setUnits(final long unitsMeasured, final long unitsTotalTime) {
 
 
 BUILD SUCCESSFUL
