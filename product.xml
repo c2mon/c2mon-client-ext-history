@@ -1,5 +1,5 @@
 <products>
-    <product name="c2mon-client-ext-history" directory="c2mon/client/c2mon-client-ext-history" version="2.0.1">
+    <product name="c2mon-client-ext-history" directory="c2mon/client/c2mon-client-ext-history" version="2.1.0">
         <dependencies>
             <!-- C2MON dependencies -->
             <dep groupId="cern.c2mon.client" product="c2mon-client-core"/>

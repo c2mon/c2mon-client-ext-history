@@ -1,12 +1,24 @@
 [CBNG] [product.xml] 'directory' attribute: Ignoring everything after 'client' for value c2mon/client/c2mon-client-ext-history 
-:cleanEclipseClasspath
-:cleanEclipseJdt
-:cleanEclipseProject
-:cleanEclipse UP-TO-DATE
-:eclipseClasspath
-:eclipseJdt
-:eclipseProject
-:eclipse
+:packagingTar SKIPPED
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:jar UP-TO-DATE
+:javadoc UP-TO-DATE
+:javadocJar UP-TO-DATE
+:sourcesJar UP-TO-DATE
+:assemble UP-TO-DATE
+:check
+:build
+:generateMetadataFileForCbngPublication SKIPPED
+:generatePomFileForCbngPublication
+:publishCbngPublicationToDevelopmentRepository
+:registerPublication
+[CBNG] Registering publication cern.c2mon.client:c2mon-client-ext-history:2.1.0-SNAPSHOT in repository beco-development-local (publication: cbng)
+:setAlias
+:fullPublishTask
+:deployToNfs SKIPPED
+:devrelease
 
 
 BUILD SUCCESSFUL
