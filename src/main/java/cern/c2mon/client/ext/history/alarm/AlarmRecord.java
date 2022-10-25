@@ -31,6 +31,7 @@ import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.Map;
 
+
 @Entity
 @Data
 @Table(name = "alarm")
@@ -65,11 +66,11 @@ public class AlarmRecord {
     @Column(name ="alarmsourcetime")
     private LocalDateTime sourceTimestamp;
 
-    @Column(name ="alarmtime", insertable = false, updatable = false)
-    private Instant instantTimestamp;
+//    @Column(name ="alarmtime", insertable = false, updatable = false)
+//    private Instant instantTimestamp;
 
-    @Column(name ="alarmsourcetime", insertable = false, updatable = false)
-    private Instant instantSourceTimestamp;
+//    @Column(name ="alarmsourcetime", insertable = false, updatable = false)
+//    private Instant instantSourceTimestamp;
 
     @Column(name = "alarminfo")
     private String info;
@@ -77,9 +78,9 @@ public class AlarmRecord {
     @Column(name = "alarmmetadata")
     private String metadata;
 
-    @Column(name = "alarmmetadata", insertable = false, updatable = false)
-    @Convert(converter = MapConverter.class)
-    private Map<String, Object> metadataMap;
+//    @Column(name = "alarmmetadata", insertable = false, updatable = false)
+//    @Convert(converter = MapConverter.class)
+//    private Map<String, Object> metadataMap;
 
     @Column(name = "alarmoscillation")
     private Boolean alarmOscillation;
