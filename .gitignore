@@ -11,7 +11,7 @@ temp.json
 .settings/
 .classpath
 .project
-.gradle/**
+.gradle/
 
 # Package Files
 *.jar
