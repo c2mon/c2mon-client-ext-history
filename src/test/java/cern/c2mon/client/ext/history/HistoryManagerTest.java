@@ -159,13 +159,13 @@ public class HistoryManagerTest {
     final HistoryPlayerListener historyPlayerListenerMock = EasyMock.createNiceMock(HistoryPlayerListener.class);
 
     // The list of history provider listeners which will be added
-    final Capture<HistoryProviderListener> historyProviderListeners = new Capture<>(CaptureType.ALL);
+    final Capture<HistoryProviderListener> historyProviderListeners = Capture.newInstance(CaptureType.ALL);
 
     // Captures the last call for getting the initial records
-    final Capture<Long[]> initalRecordRequest = new Capture<>(CaptureType.LAST);
+    final Capture<Long[]> initalRecordRequest = Capture.newInstance(CaptureType.LAST);
 
     // Always contains the parameter of the last call to cacheMock.get(Set<Long>)
-    final Capture<Set<Long>> cacheGetParameter = new Capture<>(CaptureType.LAST);
+    final Capture<Set<Long>> cacheGetParameter = Capture.newInstance(CaptureType.LAST);
 
     final Object historyModeSyncLock = new Object();
 

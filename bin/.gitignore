@@ -26,3 +26,6 @@ hs_err_pid*
 
 activemq-data/
 /bin/
+
+src/main/java/c2mon-client.properties
+

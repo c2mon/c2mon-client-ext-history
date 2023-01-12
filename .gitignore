@@ -25,7 +25,7 @@ hs_err_pid*
 .DS_Store
 
 activemq-data/
-/bin/
+bin/
 
 src/main/java/c2mon-client.properties
 
