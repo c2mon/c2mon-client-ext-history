@@ -2,7 +2,7 @@
     <product name="c2mon-client-ext-history" groupId="cern.c2mon.client" version="2.1.2">
         <dependencies>
             <!-- C2MON dependencies -->
-            <dep groupId="cern.c2mon.client" product="c2mon-client-core" version="1.21.6-SNAPSHOT"/>
+            <dep groupId="cern.c2mon.client" product="c2mon-client-core" version="PRO"/>
 
             <!--  PROBLEM: these deps are probably not part of the usual BE-CSS stuff, and therefore require explicit
 			version numbers to be found -->
